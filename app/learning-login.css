@@ -1,0 +1,86 @@
+/* Tejasvi Learning login: brand panel + calm form. Spacing on an 8px scale. */
+.tl-login{--tl-ink:var(--brand-ink,#0B2440);--tl-muted:#566A7F;--tl-line:#B9C7D6;--tl-primary:var(--brand-primary,#063868);display:flex;flex-wrap:wrap;min-height:100svh;background:#F5F8FB;color:var(--tl-ink);font-family:Manrope,var(--font-sans),system-ui,sans-serif}
+.tl-login *{box-sizing:border-box}
+
+.tl-login-story{flex:1 1 520px;position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:48px 64px;color:var(--brand-on-primary,#fff);background:linear-gradient(140deg,color-mix(in srgb,var(--tl-primary) 82%,#000) 0%,var(--tl-primary) 50%,color-mix(in srgb,var(--tl-primary) 72%,#4C9BFF) 100%)}
+.tl-login-story:before{content:"";position:absolute;z-index:-1;right:-120px;top:-140px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(255,138,31,.42),rgba(255,138,31,0) 70%)}
+.tl-login-story:after{content:"";position:absolute;z-index:-1;left:-80px;bottom:-120px;width:320px;height:320px;border-radius:50%;border:1.5px solid rgba(255,255,255,.12)}
+.tl-login-mark a{display:inline-flex;align-items:center;gap:12px;color:inherit;font-size:22px;font-weight:800;letter-spacing:-.3px}
+.tl-login-logo{width:48px;height:48px;border-radius:14px;background:#fff;color:#063868;display:flex;align-items:center;justify-content:center;line-height:1;font-size:26px;font-weight:800}
+.tl-login-logo i{font-style:normal;color:#FF7800}
+.tl-login-mark .school-brand{color:inherit}.tl-login-mark .school-brand img{height:48px;width:auto;max-width:160px;background:#fff;border-radius:12px;padding:4px}
+.tl-login-mark .school-monogram{width:48px;height:48px;border-radius:14px;background:#fff;color:var(--tl-primary);display:grid;place-items:center;font-weight:800}
+.tl-login-copy{display:flex;flex-direction:column;gap:16px;max-width:520px}
+.tl-login-kicker{font-size:13px;letter-spacing:1.8px;font-weight:800;color:#FFB46B;text-transform:uppercase}
+.tl-login-copy h2{margin:0;font-size:clamp(32px,3.2vw,44px);line-height:1.1;letter-spacing:-1px;font-weight:800;color:inherit;text-wrap:balance}
+.tl-login-copy>p:not(.tl-login-kicker){font-size:17px;line-height:1.6;color:color-mix(in srgb,currentColor 84%,transparent)}
+.tl-login-copy ul{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:24px}
+.tl-login-copy li{display:flex;gap:16px;align-items:flex-start}
+.tl-login-copy li>span{width:44px;height:44px;flex-shrink:0;border-radius:14px;display:grid;place-items:center;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.24)}
+.tl-login-copy li strong{display:block;font-size:16px;margin-bottom:4px}
+.tl-login-copy li p{font-size:14.5px;line-height:1.5;color:color-mix(in srgb,currentColor 84%,transparent)}
+.tl-login-foot{font-size:13.5px;color:color-mix(in srgb,currentColor 72%,transparent)}
+
+.tl-login-panel{flex:1 1 480px;display:flex;align-items:center;justify-content:center;padding:48px 32px}
+.tl-login-content{width:100%;max-width:420px;display:flex;flex-direction:column;gap:32px;scroll-margin-top:24px}
+.tl-login-back{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;min-height:40px;font-size:14px;font-weight:600;color:var(--tl-muted)}
+.tl-login-back:hover{color:var(--tl-ink)}
+.tl-login-head{display:flex;flex-direction:column;gap:8px}
+.tl-login-head h1{margin:0;font-size:34px;line-height:1.2;letter-spacing:-.6px;font-weight:800;color:var(--tl-ink)}
+.tl-login-head p{font-size:16px;line-height:1.6;color:var(--tl-muted)}
+
+.tl-login .tj-login-form{display:flex;flex-direction:column;gap:24px}
+.tl-login .tj-login-field{display:flex;flex-direction:column;gap:8px}
+.tl-login .tj-login-field label,.tl-login .tl-label-row label{font-size:14px;font-weight:700;color:var(--tl-ink)}
+.tl-login .tl-label-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.tl-login .tl-forgot{border:0;background:none;padding:4px 0;font:600 13.5px Manrope,sans-serif;color:#0F55A8;cursor:pointer}
+.tl-login .tl-forgot:hover{color:var(--tl-ink);text-decoration:underline}
+.tl-login .tj-input-wrap{position:relative;display:flex;align-items:center}
+.tl-login .tj-input-wrap>svg{position:absolute;left:16px;pointer-events:none;color:var(--tl-muted)}
+.tl-login .tj-input-wrap:focus-within>svg{color:var(--tl-primary)}
+.tl-login .tj-input-wrap input{width:100%;min-width:0;height:56px;padding:0 16px 0 48px;border:1.5px solid var(--tl-line);border-radius:14px;background:#fff;font:500 16px Manrope,sans-serif;color:var(--tl-ink);transition:border-color .15s,box-shadow .15s}
+.tl-login .tj-input-wrap input::placeholder{color:#7A8DA0}
+.tl-login .tj-input-wrap input:hover{border-color:#8FA3B8}
+.tl-login .tj-input-wrap input:focus{outline:0;border-color:#0F55A8;box-shadow:0 0 0 4px #E6EFF9}
+.tl-login .tj-input-wrap input:disabled{background:#EEF3F8;color:var(--tl-muted)}
+.tl-login .tj-password-wrap input{padding-right:56px}
+.tl-login .tj-password-toggle{position:absolute;right:6px;top:6px;width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:10px;background:transparent;color:var(--tl-muted);cursor:pointer}
+.tl-login .tj-password-toggle:hover{background:#EEF3F8;color:var(--tl-ink)}
+.tl-login .tj-caps-note{font-size:13px;color:#8A4B00;margin:0}
+.tl-login .tj-login-submit{height:56px;width:100%;border:0;border-radius:14px;background:var(--orange,#FF7800);color:#1A0E00;font:800 16.5px Manrope,sans-serif;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;box-shadow:0 8px 20px rgba(255,120,0,.28);transition:transform .15s,box-shadow .15s,filter .15s}
+.tl-login .tj-login-submit:not(:disabled):hover{transform:translateY(-1px);filter:brightness(.97);box-shadow:0 10px 24px rgba(255,120,0,.34)}
+.tl-login .tj-login-submit:disabled{opacity:.7;cursor:wait}
+.tl-login .tj-login-submit:focus-visible,.tl-login .tj-password-toggle:focus-visible,.tl-login .tl-forgot:focus-visible{outline:3px solid #0F55A8;outline-offset:3px}
+.tl-login .tj-login-error{display:flex;align-items:flex-start;gap:12px;margin:0;padding:16px;border-radius:14px;background:#FDECEA;border:1px solid #F3B8B1;color:#8C1D18;font-size:14px;line-height:1.5}
+.tl-login .tj-login-error svg{margin-top:1px}
+.tl-login .tj-login-help{font-size:14px}
+.tl-login .tj-login-help summary{display:inline-flex;align-items:center;gap:8px;min-height:40px;list-style:none;cursor:pointer;color:var(--tl-muted);font-weight:600}
+.tl-login .tj-login-help summary::-webkit-details-marker{display:none}
+.tl-login .tj-login-help[open] summary svg{transform:rotate(180deg)}
+.tl-login .tj-login-help>div{margin-top:8px;padding:16px;border-radius:14px;background:#fff;border:1px solid #DCE4EE}
+.tl-login .tj-login-help strong{font-size:14px}
+.tl-login .tj-login-help p{margin:4px 0 16px;font-size:14px;line-height:1.55;color:var(--tl-muted)}
+.tl-login .tj-login-help p:last-child{margin-bottom:0}
+.tl-login .tl-login-note{display:flex;gap:16px;align-items:flex-start;padding:16px;border-radius:16px;background:#E6EFF9;color:#063868}
+.tl-login .tl-login-note svg{flex-shrink:0;margin-top:2px}
+.tl-login .tl-login-note p{font-size:14px;line-height:1.55}
+.tl-login .tj-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.tl-login .tj-login-spinner{animation:tl-spin 1s linear infinite}
+@keyframes tl-spin{to{transform:rotate(360deg)}}
+/* First-run Super Admin form */
+.tl-login .clean-owner-form{gap:16px}
+.tl-login .clean-owner-form label{font-size:14px;font-weight:700;gap:8px}
+.tl-login .clean-owner-form input{min-height:56px;border:1.5px solid var(--tl-line);border-radius:14px;padding:0 16px;font-size:16px}
+
+@media(max-width:1100px){.tl-login-story{padding:40px}.tl-login-copy ul{gap:16px}}
+@media(max-width:1000px){
+ .tl-login{flex-direction:column;flex-wrap:nowrap}
+ .tl-login-story{flex:none;padding:24px;gap:16px}
+ .tl-login-copy>p:not(.tl-login-kicker),.tl-login-copy ul,.tl-login-foot,.tl-login-kicker{display:none}
+ .tl-login-copy h2{font-size:22px;letter-spacing:-.4px}
+ .tl-login-mark a{font-size:18px}.tl-login-logo{width:40px;height:40px;font-size:22px;border-radius:12px}
+ .tl-login-panel{flex:1;align-items:flex-start;padding:24px 16px 48px}
+ .tl-login-content{gap:24px}
+ .tl-login-head h1{font-size:28px}
+}
+@media(prefers-reduced-motion:reduce){.tl-login *{animation:none!important;transition:none!important}}

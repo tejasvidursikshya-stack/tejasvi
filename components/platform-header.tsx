@@ -1,0 +1,3 @@
+import { ArrowLeft, ArrowRight } from "lucide-react";
+export function PlatformHeader(){return <header className="site-header"><div className="container header-inner"><a className="brand" href="/" aria-label="Tejasvi home"><img src="/assets/tejasvi-campus-logo.svg" alt="Tejasvi" width="148" height="42"/></a><nav className="inner-nav" aria-label="Main navigation"><a href="/schools">For schools</a><a href="/login" className="button button-outline button-small">Log in <ArrowRight size={16}/></a></nav></div></header>}
+export function BackHome(){return <a href="/" className="quiet-link"><ArrowLeft size={16}/> Back to home</a>}

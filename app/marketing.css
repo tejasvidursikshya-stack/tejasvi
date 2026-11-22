@@ -1,0 +1,102 @@
+/* Public homepage only. All rules are scoped to avoid affecting LMS workspaces. */
+.tejasvi-marketing{--tm-navy:var(--navy);--tm-orange:var(--orange);--tm-muted:var(--brand-muted);color:var(--tm-navy);background:#fff;line-height:1.65;overflow-x:clip}
+.tejasvi-marketing .tm-wrap{width:min(1180px,calc(100% - 64px));margin-inline:auto}
+.tejasvi-marketing h1,.tejasvi-marketing h2,.tejasvi-marketing h3,.tejasvi-marketing h4{color:var(--tm-navy);text-wrap:balance}
+.tejasvi-marketing h2{font-size:clamp(30px,3.2vw,44px);letter-spacing:-1.7px;line-height:1.22}
+.tejasvi-marketing h3{font-size:20px;line-height:1.4;letter-spacing:-.5px}
+.tejasvi-marketing p{color:var(--tm-muted)}
+.tejasvi-marketing .tm-header{position:sticky;top:0;z-index:40;background:#fffffff5;border-bottom:1px solid var(--brand-line);backdrop-filter:blur(16px)}
+.tejasvi-marketing .tm-nav{height:88px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.tejasvi-marketing .tm-logo{width:136px;height:auto}
+.tejasvi-marketing .tm-desktop{display:flex;gap:30px;font-size:13px;font-weight:600}
+.tejasvi-marketing .tm-desktop a{display:flex;align-items:center;gap:5px}
+.tejasvi-marketing nav a:hover,.tejasvi-marketing .tm-link:hover{color:var(--brand-accent-strong)}
+.tejasvi-marketing .tm-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 21px;min-height:50px;border-radius:8px;font-size:13px;font-weight:700;transition:transform .18s,box-shadow .18s;line-height:1.5}
+.tejasvi-marketing .tm-btn:hover{transform:translateY(-2px);box-shadow:0 6px 16px color-mix(in srgb, var(--navy) 7.06%, transparent)}
+.tejasvi-marketing .tm-dark{background:var(--tm-navy);color:white}
+.tejasvi-marketing .tm-orange{background:var(--tm-orange);color:var(--brand-ink);border:1px solid var(--tm-orange)}
+.tejasvi-marketing .tm-outline{background:white;border:1px solid var(--brand-line)}
+.tejasvi-marketing .tm-menu{display:none;border:0;background:transparent;padding:9px}
+.tejasvi-marketing .tm-mobile{padding:8px 24px 24px;border-top:1px solid var(--brand-line)}
+.tejasvi-marketing .tm-mobile a{display:flex;justify-content:space-between;padding:13px 0;font-weight:600}
+.tejasvi-marketing .tm-hero{padding:65px 0 0;background:radial-gradient(ellipse at 10% 55%,var(--brand-accent-soft),transparent 42%),radial-gradient(ellipse at 90% 65%,var(--brand-soft),transparent 42%),var(--brand-accent-subtle)}
+.tejasvi-marketing .tm-hero-copy{text-align:center;max-width:850px;margin:auto}
+.tejasvi-marketing .tm-pill{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--brand-line);border-radius:30px;padding:6px 13px;background:#fff;color:var(--brand-accent-strong);font-size:10px;font-weight:700;letter-spacing:1.1px}
+.tejasvi-marketing .tm-pill span{width:6px;height:6px;border-radius:50%;background:var(--tm-orange)}
+.tejasvi-marketing h1{font-size:clamp(40px,5.2vw,68px);line-height:1.12;letter-spacing:-3.2px;margin:23px 0 23px;font-weight:700}
+.tejasvi-marketing h1 span{color:var(--brand-accent-strong);position:relative}
+.tejasvi-marketing h1 span:after{content:"";position:absolute;bottom:-5px;left:0;right:0;border-bottom:4px solid var(--brand-line-strong);border-radius:50%;transform:rotate(-3deg)}
+.tejasvi-marketing .tm-lead{font-size:17px;line-height:1.8}
+.tejasvi-marketing .tm-actions{display:flex;justify-content:center;gap:12px;margin-top:27px}
+.tejasvi-marketing .tm-hero-note{display:flex;justify-content:center;align-items:center;gap:7px;font-size:11px;margin-top:18px}
+.tejasvi-marketing .tm-showcase{margin-top:48px;gap:0;scroll-margin-top:100px}
+.tejasvi-marketing .tm-switcher{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+.tejasvi-marketing .tm-switcher>span{font-size:12px;font-weight:600}
+.tejasvi-marketing .tm-tabs{background:var(--brand-soft);padding:4px;height:auto;border-radius:30px;gap:3px}
+.tejasvi-marketing .tm-tabs button{font-size:12px;padding:10px 19px;border-radius:25px;color:var(--brand-muted);min-height:40px}
+.tejasvi-marketing .tm-tabs button[data-state=active]{background:var(--tm-navy);color:#fff}
+.tejasvi-marketing .tm-edition{display:grid;grid-template-columns:.85fr 1.15fr;gap:38px;background:#fff;border:1px solid var(--brand-line);border-radius:20px;padding:35px;box-shadow:0 18px 65px color-mix(in srgb, var(--navy) 6.27%, transparent);align-items:center;margin:0}
+.tejasvi-marketing .tm-edition[data-state=inactive]{display:none}
+.tejasvi-marketing .tm-kicker{font-size:10px;font-weight:700;letter-spacing:1.4px;color:var(--brand-accent-strong);margin-bottom:15px}
+.tejasvi-marketing .tm-edition h2{font-size:32px;letter-spacing:-1.2px;margin-bottom:16px}
+.tejasvi-marketing .tm-edition-copy>p:not(.tm-kicker){font-size:13px;line-height:1.8;max-width:360px}
+.tejasvi-marketing .tm-edition ul{list-style:none;padding:0;margin:20px 0;font-size:12px;display:grid;gap:10px}
+.tejasvi-marketing .tm-edition li{display:flex;align-items:flex-start;gap:8px}
+.tejasvi-marketing .tm-edition li svg{color:var(--brand-muted);margin-top:2px}
+.tejasvi-marketing .tm-link{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:13px}
+.tejasvi-marketing .tm-preview{border:1px solid var(--brand-line);border-radius:12px;overflow:hidden;box-shadow:0 10px 24px color-mix(in srgb, var(--navy) 3.92%, transparent);background:var(--brand-subtle);align-self:stretch}
+.tejasvi-marketing .tm-preview-top{background:#fff;border-bottom:1px solid var(--brand-line);padding:13px 17px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tejasvi-marketing .tm-preview-brand{font-size:12px;font-weight:700;display:flex;align-items:center;gap:8px}
+.tejasvi-marketing .tm-preview-brand>span{background:var(--tm-navy);color:white;padding:2px 8px;border-radius:5px}
+.tejasvi-marketing .tm-sample{font-size:9px;color:var(--brand-muted)}
+.tejasvi-marketing .tm-preview-body{display:flex}
+.tejasvi-marketing .tm-preview aside{width:49px;flex-shrink:0;background:white;border-right:1px solid var(--brand-line);display:flex;align-items:center;flex-direction:column;gap:25px;padding:20px 0;color:var(--brand-muted)}
+.tejasvi-marketing .tm-side-active{background:var(--brand-accent-soft);color:var(--brand-accent-strong);padding:7px;border-radius:7px}
+.tejasvi-marketing .tm-preview-main{padding:20px;flex:1;min-width:0}
+.tejasvi-marketing .tm-preview-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:8px}
+.tejasvi-marketing .tm-preview-heading small{font-size:8px;letter-spacing:1px;color:var(--brand-muted)}
+.tejasvi-marketing .tm-preview-heading h3{font-size:15px;letter-spacing:-.3px;margin-top:3px}
+.tejasvi-marketing .tm-avatar{background:var(--brand-mid);border:3px solid white;border-radius:50%;font-size:10px;padding:5px 9px}
+.tejasvi-marketing .tm-course-art{border-radius:9px;background:var(--brand-soft);display:flex;align-items:center;min-height:130px;overflow:hidden;padding:16px 0 16px 18px}
+.tejasvi-marketing .tm-course-art>div{width:57%;position:relative;z-index:1}
+.tejasvi-marketing .tm-course-art span{font-size:9px;color:var(--brand-muted)}
+.tejasvi-marketing .tm-course-art h4{font-size:19px;font-weight:700;line-height:1.25;margin:7px 0}
+.tejasvi-marketing .tm-course-art p{font-size:9px}
+.tejasvi-marketing .tm-course-art img{width:43%;height:110px;object-fit:contain}
+.tejasvi-marketing .tm-unit{display:flex;gap:10px;align-items:center;background:white;padding:12px;margin-top:13px;border:1px solid var(--brand-line);border-radius:8px}
+.tejasvi-marketing .tm-unit-icon{background:var(--brand-accent-soft);color:var(--brand-accent-strong);padding:8px;border-radius:7px}
+.tejasvi-marketing .tm-unit>div{flex:1}
+.tejasvi-marketing .tm-unit small{display:block;font-size:7px;color:var(--brand-muted);letter-spacing:.4px}
+.tejasvi-marketing .tm-unit strong{display:block;font-size:11px;margin-top:3px}
+.tejasvi-marketing .tm-resource-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.tejasvi-marketing .tm-resource-row span{display:flex;align-items:center;gap:7px;background:white;border:1px solid var(--brand-line);border-radius:6px;padding:10px;font-size:9px}
+.tejasvi-marketing .tm-path{display:flex;align-items:center;gap:7px;font-size:9px;color:var(--brand-muted);margin-top:14px}
+.tejasvi-marketing .tm-foundation{padding:45px 0;border-bottom:1px solid var(--brand-line);background:var(--brand-accent-subtle)}
+.tejasvi-marketing .tm-foundation p{text-align:center;font-size:9px;letter-spacing:1.7px;font-weight:700;margin-bottom:23px}
+.tejasvi-marketing .tm-foundation .tm-wrap>div{display:flex;justify-content:space-around;gap:20px}
+.tejasvi-marketing .tm-foundation span{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600}
+.tejasvi-marketing .tm-foundation svg{width:20px;color:var(--brand-line-strong)}
+.tejasvi-marketing .tm-section{padding-block:90px}
+.tejasvi-marketing .tm-section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:35px;margin-bottom:35px}
+.tejasvi-marketing .tm-section-heading>p{max-width:310px;font-size:14px;line-height:1.8}
+.tejasvi-marketing .tm-features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tejasvi-marketing .tm-feature{padding:27px 23px;border-radius:12px;background:var(--brand-subtle);border:1px solid var(--brand-line)}
+.tejasvi-marketing .tm-tone-1{background:var(--brand-accent-subtle);border-color:var(--brand-line)}.tejasvi-marketing .tm-tone-2{background:var(--brand-soft);border-color:var(--brand-line)}.tejasvi-marketing .tm-tone-3{background:var(--brand-subtle);border-color:var(--brand-line)}
+.tejasvi-marketing .tm-feature-icon{display:grid;place-items:center;width:48px;height:48px;border:1px solid var(--brand-line);border-radius:12px;background:#ffffffab;margin-bottom:30px}
+.tejasvi-marketing .tm-feature small{font-size:8px;letter-spacing:1px;color:var(--brand-muted);font-weight:700}
+.tejasvi-marketing .tm-feature h3{font-size:18px;margin:10px 0 12px}.tejasvi-marketing .tm-feature p{font-size:12px;line-height:1.9}
+.tejasvi-marketing .tm-brand-section{background:var(--brand-subtle);padding:70px 0}
+.tejasvi-marketing .tm-brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:center}
+.tejasvi-marketing .tm-brand-art{padding:20px;border-radius:20px;background:var(--brand-soft);position:relative}
+.tejasvi-marketing .tm-brand-art>img{width:100%;height:auto}.tejasvi-marketing .tm-brand-label{display:flex;align-items:center;gap:15px;padding:18px 24px;background:white;box-shadow:0 8px 30px color-mix(in srgb, var(--navy) 5.1%, transparent);border:1px solid var(--brand-line);border-radius:10px;margin:-5px 6px 5px;position:relative}
+.tejasvi-marketing .tm-brand-label strong{display:block;font-size:13px}.tejasvi-marketing .tm-brand-label span{font-size:10px;color:var(--brand-muted)}.tejasvi-marketing .tm-brand-label svg{color:var(--brand-accent-strong)}
+.tejasvi-marketing .tm-brand-copy>p:not(.tm-kicker){font-size:14px;margin:21px 0 25px;line-height:1.9}.tejasvi-marketing .tm-brand-item{display:flex;gap:14px;margin-bottom:22px}.tejasvi-marketing .tm-brand-item svg{color:var(--brand-muted);margin-top:3px}.tejasvi-marketing .tm-brand-item h3{font-size:14px;margin-bottom:3px}.tejasvi-marketing .tm-brand-item p{font-size:12px}
+.tejasvi-marketing .tm-centered{text-align:center;margin-bottom:40px}.tejasvi-marketing .tm-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}.tejasvi-marketing .tm-step-top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--brand-line);padding-bottom:18px;margin-bottom:22px}.tejasvi-marketing .tm-step-top span{font-size:33px;font-weight:700;color:var(--brand-line-strong)}.tejasvi-marketing .tm-step-top svg{color:var(--brand-accent-strong)}.tejasvi-marketing .tm-steps h3{font-size:18px;margin-bottom:12px}.tejasvi-marketing .tm-steps p{font-size:13px;line-height:1.9}
+.tejasvi-marketing .tm-ai{display:flex;align-items:center;gap:24px;background:var(--brand-accent-subtle);border:1px solid var(--brand-line);padding:30px;border-radius:14px}.tejasvi-marketing .tm-ai-icon{color:var(--brand-accent-strong);background:var(--brand-accent-soft);padding:17px;border-radius:15px}.tejasvi-marketing .tm-ai>div:nth-child(2){flex:1}.tejasvi-marketing .tm-ai .tm-kicker{margin-bottom:7px}.tejasvi-marketing .tm-ai h2{font-size:23px;letter-spacing:-.6px}.tejasvi-marketing .tm-ai p:not(.tm-kicker){font-size:12px;margin-top:10px;max-width:600px}.tejasvi-marketing .tm-ai .tm-btn{flex-shrink:0}
+.tejasvi-marketing .tm-faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.tejasvi-marketing .tm-faq>div>p:not(.tm-kicker){font-size:13px;margin-top:23px}.tejasvi-marketing .tm-faq details{border-bottom:1px solid var(--brand-line);padding:19px 0}.tejasvi-marketing .tm-faq details:first-child{padding-top:0}.tejasvi-marketing .tm-faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:22px;font-size:14px;font-weight:600;cursor:pointer}.tejasvi-marketing .tm-faq summary::-webkit-details-marker{display:none}.tejasvi-marketing .tm-faq summary:focus-visible{outline:3px solid var(--brand-focus);outline-offset:5px}.tejasvi-marketing .tm-faq details[open] svg{transform:rotate(180deg)}.tejasvi-marketing .tm-faq details p{font-size:13px;padding-top:15px;line-height:1.85}
+.tejasvi-marketing .tm-final{text-align:center;background:var(--tm-navy);padding:65px 0}.tejasvi-marketing .tm-final h2{color:white;font-size:clamp(30px,3.7vw,48px)}.tejasvi-marketing .tm-final .tm-kicker{color:var(--brand-accent-mid)}.tejasvi-marketing .tm-final .tm-btn{margin:28px 0 18px}.tejasvi-marketing .tm-final p:last-child{font-size:11px;color:var(--brand-line-strong)}
+.tejasvi-marketing .tm-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding-top:43px;gap:30px}.tejasvi-marketing .tm-footer p{font-size:12px;margin-top:14px}.tejasvi-marketing .tm-footer nav{display:flex;gap:28px;font-size:12px;font-weight:600}.tejasvi-marketing .tm-footer-bottom{width:100%;border-top:1px solid var(--brand-line);display:flex;justify-content:space-between;font-size:10px;color:var(--brand-muted);padding:22px 0}
+@media(min-width:901px){.tejasvi-marketing .tm-mobile{display:none}}
+@media(max-width:1000px){.tejasvi-marketing .tm-desktop{gap:18px}.tejasvi-marketing .tm-header-login{font-size:11px;padding:12px}.tejasvi-marketing .tm-edition{gap:25px;padding:25px}.tejasvi-marketing .tm-brand-grid{gap:45px}.tejasvi-marketing .tm-features{grid-template-columns:repeat(2,1fr)}.tejasvi-marketing .tm-ai{flex-wrap:wrap}.tejasvi-marketing .tm-ai>.tm-btn{margin-left:88px}}
+@media(max-width:900px){.tejasvi-marketing .tm-desktop,.tejasvi-marketing .tm-header-login{display:none}.tejasvi-marketing .tm-menu{display:block}.tejasvi-marketing .tm-nav{height:74px}.tejasvi-marketing .tm-edition{grid-template-columns:1fr 1fr}.tejasvi-marketing .tm-preview aside{display:none}.tejasvi-marketing .tm-preview-main{padding:12px}.tejasvi-marketing .tm-preview-heading h3{font-size:12px}.tejasvi-marketing .tm-course-art h4{font-size:16px}.tejasvi-marketing .tm-section{padding-block:65px}.tejasvi-marketing .tm-foundation span{font-size:10px}.tejasvi-marketing .tm-faq{gap:35px}}
+@media(max-width:640px){.tejasvi-marketing .tm-wrap{width:calc(100% - 36px)}.tejasvi-marketing .tm-hero{padding-top:38px}.tejasvi-marketing h1{font-size:39px;letter-spacing:-1.8px;line-height:1.17}.tejasvi-marketing h2{font-size:30px;letter-spacing:-1px}.tejasvi-marketing .tm-pill{font-size:8px;letter-spacing:.8px}.tejasvi-marketing .tm-lead{font-size:14px}.tejasvi-marketing .tm-actions{flex-direction:column;max-width:320px;margin:25px auto 0}.tejasvi-marketing .tm-hero-note{font-size:10px}.tejasvi-marketing .tm-showcase{margin-top:35px}.tejasvi-marketing .tm-switcher{flex-direction:column;gap:12px}.tejasvi-marketing .tm-tabs{width:100%}.tejasvi-marketing .tm-tabs button{font-size:11px;padding:10px 8px}.tejasvi-marketing .tm-edition{grid-template-columns:1fr;padding:22px 17px;gap:26px;border-radius:14px}.tejasvi-marketing .tm-edition h2{font-size:28px}.tejasvi-marketing .tm-edition-copy>p:not(.tm-kicker){max-width:none}.tejasvi-marketing .tm-preview-main{padding:14px}.tejasvi-marketing .tm-preview-heading h3{font-size:14px}.tejasvi-marketing .tm-preview-top{padding:12px}.tejasvi-marketing .tm-course-art h4{font-size:18px}.tejasvi-marketing .tm-foundation{padding:30px 0}.tejasvi-marketing .tm-foundation .tm-wrap>div{display:grid;grid-template-columns:1fr 1fr;gap:20px}.tejasvi-marketing .tm-foundation span{font-size:11px}.tejasvi-marketing .tm-section{padding-block:52px}.tejasvi-marketing .tm-section-heading{display:block;margin-bottom:25px}.tejasvi-marketing .tm-section-heading>p{margin-top:18px;max-width:none;font-size:13px}.tejasvi-marketing .tm-features{gap:12px}.tejasvi-marketing .tm-feature{padding:19px 15px}.tejasvi-marketing .tm-feature h3{font-size:16px}.tejasvi-marketing .tm-feature small{font-size:7px;letter-spacing:.5px}.tejasvi-marketing .tm-feature p{font-size:11px}.tejasvi-marketing .tm-feature-icon{margin-bottom:20px;width:40px;height:40px}.tejasvi-marketing .tm-brand-section{padding:40px 0}.tejasvi-marketing .tm-brand-grid{grid-template-columns:1fr;gap:35px}.tejasvi-marketing .tm-brand-art{padding:12px}.tejasvi-marketing .tm-brand-label{padding:15px}.tejasvi-marketing .tm-steps{grid-template-columns:1fr;gap:28px}.tejasvi-marketing .tm-step-top{margin-bottom:15px;padding-bottom:12px}.tejasvi-marketing .tm-centered{text-align:left;margin-bottom:25px}.tejasvi-marketing .tm-ai{padding:23px;gap:17px;display:block}.tejasvi-marketing .tm-ai-icon{display:inline-flex;margin-bottom:16px}.tejasvi-marketing .tm-ai h2{font-size:25px}.tejasvi-marketing .tm-ai>.tm-btn{margin:20px 0 0}.tejasvi-marketing .tm-faq{grid-template-columns:1fr;gap:28px}.tejasvi-marketing .tm-final{padding:48px 0}.tejasvi-marketing .tm-final h2{font-size:31px}.tejasvi-marketing .tm-footer{padding-top:32px;gap:26px}.tejasvi-marketing .tm-footer nav{width:100%;gap:24px}.tejasvi-marketing .tm-footer-bottom{font-size:9px;gap:10px}.tejasvi-marketing .tm-wide{display:none}}

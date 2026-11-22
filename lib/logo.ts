@@ -1,0 +1,2 @@
+import sharp from 'sharp';
+export async function normalizeLogo(input:Buffer){if(input.length>2000000)throw new Error('Logo exceeds 2 MB');const image=sharp(input,{limitInputPixels:16000000,animated:false}),meta=await image.metadata();if(!['png','jpeg','webp'].includes(meta.format||'')||(meta.pages||1)>1)throw new Error('Unsupported image');return image.rotate().resize({width:1000,height:1000,fit:'inside',withoutEnlargement:true}).webp({quality:90}).toBuffer()}

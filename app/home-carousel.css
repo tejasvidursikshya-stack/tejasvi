@@ -1,0 +1,143 @@
+/* Hero banners and restored device showcase for the public homepage. */
+.tejasvi-home .th-hero-carousel{padding-top:24px;padding-bottom:28px}
+.tejasvi-home .th-hero-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
+.tejasvi-home .th-hero-kicker{font-size:9px;letter-spacing:.14em;font-weight:600;color:var(--th-muted)}
+.tejasvi-home .th-hero-banner{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:42px;min-height:480px;animation:th-banner-in .65s ease-out}
+.tejasvi-home .th-hero-banner h1{font-size:clamp(42px,4.6vw,64px);letter-spacing:-2.6px;line-height:1.13;margin:20px 0 24px}
+.tejasvi-home .th-hero-banner h1 em:after{height:4px;bottom:1px}
+.tejasvi-home .th-hero-banner .th-hero-description{max-width:430px;font-size:16px;line-height:1.85;min-height:89px}
+.tejasvi-home .th-hero-banner .th-hero-copy{padding:10px 0 25px}
+.tejasvi-home .th-banner-visual{position:relative;margin:0 0 30px;min-width:0}
+.tejasvi-home .th-banner-photo{position:relative;height:430px;border-radius:18px 70px 18px 18px;overflow:hidden;background:var(--th-navy);isolation:isolate}
+.tejasvi-home .th-banner-photo>img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.8);animation:th-banner-photo-in 7s ease-out both}
+.tejasvi-home .th-banner-college .th-banner-photo>img{object-position:65% center}
+.tejasvi-home .th-banner-overlay{position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#052c54df)}
+.tejasvi-home .th-banner-label{position:absolute;left:29px;bottom:51px;color:#fff;display:flex;align-items:center;gap:13px}
+.tejasvi-home .th-banner-label>svg{width:47px;height:47px;padding:11px;border:1px solid #ffffff60;border-radius:50%}
+.tejasvi-home .th-banner-label>span{font-size:10px;line-height:1.6}
+.tejasvi-home .th-banner-label strong{display:block;font-size:21px;letter-spacing:-.5px;font-weight:600}
+.tejasvi-home .th-banner-note{position:absolute;bottom:-23px;left:25px;right:25px;display:flex;align-items:center;gap:13px;background:#fff;border:1px solid var(--th-line);border-radius:9px;padding:16px 20px;box-shadow:0 8px 26px #0638680e;animation:th-float 6s ease-in-out infinite}
+.tejasvi-home .th-banner-note>span{width:34px;height:34px;display:grid;place-items:center;background:#fff0e3;color:#b84d00;border-radius:50%;flex-shrink:0}
+.tejasvi-home .th-banner-note strong{display:block;font-size:12px;font-weight:700;line-height:1.7}
+.tejasvi-home .th-banner-note small{display:block;font-size:10px;color:var(--th-muted);margin-top:2px}
+.tejasvi-home .th-banner-plus{position:absolute;right:-14px;top:-22px;font-size:48px;font-weight:400;color:var(--th-orange);line-height:1;animation:th-spark 7s ease-in-out infinite}
+.tejasvi-home .th-hero-carousel-controls{display:flex;align-items:center;justify-content:space-between;gap:32px;margin-top:12px;border-top:1px solid var(--th-line);padding-top:18px}
+.tejasvi-home .th-hero-tabs{display:flex;gap:18px;flex:1;max-width:650px}
+.tejasvi-home .th-hero-tabs button{position:relative;flex:1;display:flex;align-items:center;gap:12px;text-align:left;min-height:52px;border:0;background:transparent;padding:8px 4px 16px;color:var(--th-muted);font-size:12px;font-weight:600;transition:color .2s}
+.tejasvi-home .th-hero-tabs button[aria-selected=true]{color:var(--th-navy)}
+.tejasvi-home .th-hero-tab-number{font-size:9px;color:#6c8197;font-variant-numeric:tabular-nums}
+.tejasvi-home .th-hero-tab-line{position:absolute;bottom:0;left:0;right:0;height:2px;background:#e1e8f0}
+.tejasvi-home .th-hero-tabs button[aria-selected=true] .th-hero-tab-line{background:var(--th-orange)}
+.tejasvi-home .th-hero-tabs button:hover{color:#a44400}
+.tejasvi-home .th-hero-carousel .th-slider-controls{flex-shrink:0}
+
+.tejasvi-home .th-device-showcase{margin:0 0 76px}
+.tejasvi-home .hs-devices{background:#f3f6fa;padding-top:70px;padding-bottom:55px;scroll-margin-top:86px}
+.tejasvi-home .hs-heading{max-width:760px;margin-inline:auto}
+.tejasvi-home .hs-heading>p{font-size:10px;color:var(--th-muted);font-weight:700;letter-spacing:.14em}
+.tejasvi-home .th-device-showcase .hs-heading h2{font-size:42px;line-height:1.2;letter-spacing:-1.4px;margin-bottom:18px;color:var(--th-navy)}
+.tejasvi-home .th-device-showcase .hs-heading h2 em{font:inherit;color:var(--th-navy)}
+.tejasvi-home .hs-heading>span{display:block;max-width:590px;margin-inline:auto;font-size:13px;line-height:1.9}
+.tejasvi-home .hs-device-stage{max-width:980px;margin-top:48px}
+.tejasvi-home .hs-phone{animation:th-device-float 6s ease-in-out infinite}
+.tejasvi-home .hs-feedback{background:#e8eff9;color:var(--th-navy)}
+.tejasvi-home .hs-course-banner{background:#e4ebf8}
+.tejasvi-home .hs-course-banner strong{color:var(--th-navy)}
+.tejasvi-home .th-device-showcase .hs-caption h3{font-size:21px;letter-spacing:-.5px;line-height:1.5}
+.tejasvi-home .hs-preview-note{max-width:620px;margin-inline:auto;line-height:1.8}
+.tejasvi-home .hs-tablet .hs-screen{min-height:475px}
+.tejasvi-home .hs-phone .hs-screen-layout{min-height:380px}
+.tejasvi-home .hs-controls{position:relative;z-index:1}
+@keyframes th-banner-in{from{opacity:.45;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes th-banner-photo-in{from{transform:scale(1.04)}to{transform:scale(1)}}
+@keyframes th-device-float{0%,100%{transform:translateY(0) rotate(5deg)}50%{transform:translateY(-7px) rotate(5deg)}}
+@media(max-width:1100px){
+ .tejasvi-home .th-header-inner{gap:22px}
+ .tejasvi-home .th-desktop-nav{gap:20px}
+ .tejasvi-home .th-desktop-nav a{font-size:12px}
+ .tejasvi-home .th-hero-banner{gap:28px;min-height:455px}
+ .tejasvi-home .th-hero-banner h1{font-size:53px;letter-spacing:-2.3px}
+ .tejasvi-home .th-banner-photo{height:400px}
+ .tejasvi-home .th-hero-banner .th-hero-description{font-size:14px}
+ .tejasvi-home .th-hero-banner .th-hero-actions{gap:20px}
+}
+@media(max-width:900px){
+ .tejasvi-home .th-hero-banner{gap:25px;min-height:455px}
+ .tejasvi-home .th-hero-banner h1{font-size:44px;letter-spacing:-1.9px}
+ .tejasvi-home .th-hero-banner .th-hero-description{font-size:14px;min-height:102px}
+ .tejasvi-home .th-banner-photo{height:385px;border-top-right-radius:50px}
+ .tejasvi-home .th-banner-note{left:15px;right:15px;padding:13px;gap:10px}
+ .tejasvi-home .th-banner-note strong{font-size:10px}
+ .tejasvi-home .th-banner-note small{font-size:9px}
+ .tejasvi-home .th-banner-label{left:24px}
+ .tejasvi-home .th-hero-tabs{gap:12px}
+ .tejasvi-home .th-hero-tabs button{font-size:11px;gap:8px}
+ .tejasvi-home .th-hero-carousel-controls{gap:25px}
+ .tejasvi-home .th-hero-carousel .th-slide-count{display:none}
+ .tejasvi-home .th-device-showcase{margin-bottom:55px}
+}
+@media(max-width:760px){
+ .tejasvi-home .th-hero-carousel{padding-top:14px;padding-bottom:25px}
+ .tejasvi-home .th-hero-toolbar{margin-bottom:15px}
+ .tejasvi-home .th-hero-kicker{font-size:8px;letter-spacing:.08em}
+ .tejasvi-home .th-hero-banner{grid-template-columns:1fr;gap:20px;min-height:0}
+ .tejasvi-home .th-hero-banner .th-hero-copy{padding:8px 0 5px;max-width:none}
+ .tejasvi-home .th-hero-banner h1{font-size:clamp(39px,7.8vw,57px);letter-spacing:-1.9px;line-height:1.13;margin:16px 0 20px}
+ .tejasvi-home .th-hero-banner .th-hero-description{font-size:14px;min-height:77px;max-width:500px}
+ .tejasvi-home .th-hero-banner .th-hero-actions{margin-top:22px;gap:22px;flex-direction:row}
+ .tejasvi-home .th-hero-banner .th-hero-note{margin-top:18px;margin-bottom:7px;font-size:10px}
+ .tejasvi-home .th-banner-visual{margin:8px 0 30px}
+ .tejasvi-home .th-banner-photo{height:310px;border-radius:15px 50px 15px 15px}
+ .tejasvi-home .th-banner-photo>img{object-position:50% 40%}
+ .tejasvi-home .th-banner-note{left:18px;right:18px;padding:13px 16px}
+ .tejasvi-home .th-banner-note strong{font-size:11px}
+ .tejasvi-home .th-banner-note small{font-size:9px}
+ .tejasvi-home .th-banner-label{bottom:45px}
+ .tejasvi-home .th-banner-plus{font-size:38px;right:-6px;top:-18px}
+ .tejasvi-home .th-hero-carousel-controls{margin-top:5px;flex-wrap:wrap;gap:16px;padding-top:10px}
+ .tejasvi-home .th-hero-tabs{flex-basis:100%;max-width:none}
+ .tejasvi-home .th-hero-tabs button{font-size:12px;min-height:46px;padding-bottom:14px}
+ .tejasvi-home .th-hero-carousel .th-slider-controls{width:100%;justify-content:end}
+ .tejasvi-home .th-hero-carousel .th-slide-count{display:inline;margin-right:auto}
+ .tejasvi-home .th-hero-carousel .th-slider-controls button{width:38px;height:38px}
+ .tejasvi-home .hs-devices{padding:48px 20px 35px;scroll-margin-top:75px}
+ .tejasvi-home .th-device-showcase .hs-heading h2{font-size:32px;letter-spacing:-1px}
+ .tejasvi-home .hs-heading>span{font-size:12px}
+ .tejasvi-home .hs-device-stage{margin:32px auto;max-width:340px;padding:0;display:flex;justify-content:center}
+ .tejasvi-home .hs-tablet{display:none}
+ .tejasvi-home .hs-phone{position:relative;right:auto;bottom:auto;width:260px;transform:none;animation:none}
+ .tejasvi-home .hs-phone .hs-screen-layout{min-height:380px}
+ .tejasvi-home .hs-screen-phone .hs-screen-body{padding:18px 15px}
+ .tejasvi-home .hs-phone .hs-course-banner strong{font-size:16px}
+ .tejasvi-home .th-device-showcase .hs-screen-phone h3{font-size:21px}
+ .tejasvi-home .hs-orbit{width:110%;height:75%;left:-5%;top:15%}
+ .tejasvi-home .hs-controls{gap:6px;margin-bottom:20px}
+ .tejasvi-home .hs-controls button{padding:11px 12px;font-size:11px;gap:6px;min-height:44px}
+ .tejasvi-home .hs-caption{min-height:94px}
+ .tejasvi-home .th-device-showcase .hs-caption h3{font-size:19px;line-height:1.4}
+ .tejasvi-home .hs-caption p{font-size:12px}
+ .tejasvi-home .hs-preview-note{font-size:9px}
+ .tejasvi-home .th-footer nav{flex-wrap:wrap;row-gap:15px}
+}
+@media(max-width:460px){
+ .tejasvi-home .th-hero-banner h1{font-size:39px;letter-spacing:-1.65px}
+ .tejasvi-home .th-hero-banner .th-hero-description{min-height:77px;font-size:13px}
+ .tejasvi-home .th-hero-banner .th-hero-actions{gap:20px}
+ .tejasvi-home .th-banner-photo{height:280px}
+ .tejasvi-home .th-banner-note{left:14px;right:14px;padding:12px;gap:10px}
+ .tejasvi-home .th-banner-note strong{font-size:10px}
+ .tejasvi-home .th-banner-note small{font-size:8px}
+ .tejasvi-home .th-hero-tabs button{font-size:11px;gap:9px}
+ .tejasvi-home .hs-controls button{font-size:10px;padding:10px;gap:5px}
+ .tejasvi-home .hs-controls button svg{width:15px}
+}
+@media(max-width:360px){
+ .tejasvi-home .th-hero-kicker{font-size:7px}
+ .tejasvi-home .th-hero-banner h1{font-size:34px;letter-spacing:-1.4px}
+ .tejasvi-home .th-hero-banner .th-hero-actions{gap:13px}
+ .tejasvi-home .th-banner-photo{height:255px}
+ .tejasvi-home .th-hero-tabs{gap:10px}
+ .tejasvi-home .th-hero-tabs button{gap:6px}
+ .tejasvi-home .hs-controls{gap:4px}
+ .tejasvi-home .hs-controls button{padding:10px 8px;font-size:9px}
+}

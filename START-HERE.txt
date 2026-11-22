@@ -1,0 +1,169 @@
+TEJASVI CAMPUS 3.10.0 · ANDROID PILOT + WEB APPLICATION
+====================================================
+One project, one MySQL database, one account per person.
+Schools and colleges: existing Learning + EMIS website.
+Corporate and EdTech: Learning website.
+Android pilot: learning, tasks, teacher feedback and progress.
+
+UPDATE YOUR EXISTING TEJASVI CAMPUS 3.9.0
+1. Stop the app in Terminal (Control+C). Leave MySQL running. In your original
+   configured project folder, run npm run backup before applying the update.
+2. Unzip this download. In the NEW folder, open Update-Tejasvi.command.
+   Select your ORIGINAL configured Campus 3.9.0 folder in Finder.
+3. Open Start-Tejasvi.command in that ORIGINAL folder. It rebuilds the app and
+   adds device sessions to your existing database (migration 025).
+4. On your Mac, open http://localhost:3000/api/mobile/v1/status.
+   Confirm mobileApi is 1 and version is 3.10.0.
+Do not create a new database or institution for this update.
+The updater checks the exact 3.9.0 source before writing and stops on local edits.
+It is safe to rerun on 3.10.0. Other versions need a separately matched upgrade.
+
+INSTALL THE ANDROID PILOT
+1. Read docs/android-pilot.html. The complete APK is already included.
+2. Download SDK Platform-Tools for Mac from Google's Android Developers website.
+   Unzip into Downloads/platform-tools. Android Studio's installed tools also work.
+3. Connect one Android 8.0+ phone by USB. Enable USB debugging and accept your Mac.
+4. Keep Tejasvi running. Open Test-Android-USB.command in the updated project.
+5. On the phone, use http://localhost:3000 and your existing account login.
+   Reconnect with the helper after disconnecting USB.
+The app does not need Android Studio to run; source builds do.
+This is a debug testing APK. It has not been published to Google Play.
+Remote use needs a separately configured HTTPS server deployment; the existing
+launcher deliberately serves localhost only. Native EMIS, AI, push, offline
+lessons and iOS are later milestones, not included mobile features.
+
+NEW LEARNING WORKFLOW
+- Teachers: Teaching home shows the review queue and follow-up priorities.
+- Students: Home shows the next course, outstanding work and recent feedback.
+- Open Assessment & progress -> Gradebook (students: My grades) to see marks.
+- Staff: open a learner -> Review & approve result. Select the graded items
+  included in the result, review the total, then Approve & release result.
+- Missing work is excluded from provisional percentages; it is never silently
+  recorded as zero. Approval requires a released mark for every selected item.
+- College/school Admin: use Transfer to EMIS on the approved result. Choose an
+  existing examination linked to the SAME subject and academic enrollment.
+  Review the scaled total. The new EMIS result is Draft for examination review.
+- Learning progress lists active authorized learners, including not-started
+  students, with reading, quiz and assessment progress shown separately.
+- Full walkthrough, calculations and checks: docs/learning-workflow.html.
+
+FIND AN EMIS STUDENT IN LEARNING
+1. Open http://localhost:3000/workspaces in your running installation. The
+   offline dashboard preview shows sample data only. As Admin or Super Admin,
+   open the same institution → Learning → People & organization → Student directory.
+2. Choose the EMIS academic year, leave login and class filters on All, then
+   search by student ID or name. Existing records do not need importing.
+3. Needs login? Open Activate login. Create a login for a new email or
+   confirm Link existing login for an existing student-owned account.
+4. To add teaching access, choose Assign to intake (college) or Assign to
+   batch (school), select the actual class and subjects, then Save assignment.
+   Published course content must be offered to that class. Open the guide
+   in docs/student-access.html for other statuses and checks.
+
+TRY THE CHANGES
+- EMIS opens on the Material dashboard. Click a chart’s register link to see
+  the source records. Use the view selector at the top for Reports & details
+  (My records for students) or the institution profile.
+- Super Admin: check Program overview below the charts. Select a program name
+  to see its record; change the year at the top to review a different period.
+- Learning → Teaching & content → Tutoring cards → New deck. Choose Cue cards
+  for private speaking prompts, or Flashcards for student practice. Write both
+  sides, choose a colour and Save deck. Rehearse at any time after writing.
+- Under Share with learners, choose a published course and Share flashcards.
+  Enrolled students open the course and choose Practice flashcards → Practice.
+  Only questions and answers are shared. Notes stay with the teacher.
+
+CREATE AI PRESENTATIONS WITH GAMMA
+1. In Gamma → Settings and members → API keys, create a key for this Campus server.
+2. In the configured Tejasvi folder, open Configure-AI.command, choose 4 — Gamma
+   and paste the key in the hidden prompt. The helper verifies it without creating
+   a deck. Restart Start-Tejasvi.command in the same folder.
+3. Super Admin: in the institution’s Learning → Tejasvi AI → Connections,
+   check Gamma, enable staff AI and Gamma presentations, then Save access.
+4. Teacher: open Presentations → Use Java example, review the brief, select the
+   consent box and Generate presentation. Generation uses Gamma credits.
+5. Under My presentations, preview slide text or download the full PowerPoint.
+   Share a reviewed copy to a published course. Learners open it in Resources.
+   For a complete walkthrough, open Tejasvi-AI-Activation-Guide.html.
+
+ENABLE AI FOR AN INSTITUTION
+Open Tejasvi-AI-Activation-Guide.html for the full walkthrough.
+1. In the configured folder, open Configure-AI.command. Choose OpenAI and enter
+   a project API key at the hidden prompt. Restart Start-Tejasvi.command.
+2. As platform Super Admin, open the institution’s Learning → Tejasvi AI →
+   Connections. Check the text and voice models. Enable staff AI, optionally
+   staff narration, learner conversations or the separate LiveAvatar service.
+   Save access. Repeat only for institutions you intend to enable.
+   For the live presenter, click Check LiveAvatar setup, then open the presenter,
+   tick the session consent box and choose Start video session.
+   If Sandbox says the saved voice cannot be found, this version checks Wayne’s
+   default automatically. If the default is unavailable too, open Configure-AI.command
+   in your installed folder → 2 — LiveAvatar. Keep the key and choose Sandbox.
+   Choose 2 — Choose from my voices. Pick a voice by number, then restart.
+
+FIRST LAUNCH
+1. Double-click the ZIP in Finder. Open the new Tejasvi-Campus-3.10.0 folder.
+   You need Node.js 24+ with npm, and MySQL 8+ running on your Mac. The first
+   launch needs internet to install dependencies. No Docker is required.
+   If another Tejasvi app is using port 3000, press Control+C in its window.
+2. Double-click Start-Tejasvi.command. If Finder cannot open it, open Terminal,
+   type “bash ” with a space, drag Start-Tejasvi.command into the window,
+   and press Return.
+3. Enter your MySQL port (normally 3306), MySQL administrator username
+   (often root), and its password. Nothing appears while you type it.
+   Tejasvi creates one EMPTY database: tejasvi_campus_new, or a free numbered
+   name. It will not reuse your standalone databases. Wait for “Tejasvi is ready”.
+4. Command-click the complete private “Create your first Tejasvi Super Admin”
+   link in Terminal (or copy and paste it into your browser). Choose your own
+   name, email and application password. This single-use link is for you only.
+   You can sign out here: there is still no organization.
+5. When ready, choose Create a college, or Create a school or company.
+   Choose an organization type; enter its name. Set the academic year for a
+   school or college. Contact and registration details are optional.
+   Use Create workspace when ready. Create each organization only once.
+   School/college: open Learning or EMIS in My workspaces. You can also use
+   Open EMIS directly from Learning and Open Learning from EMIS.
+   Corporate: open Learning. No EMIS setup or second login is needed.
+
+NEXT TIME
+Open Start-Tejasvi.command again. Use http://localhost:3000/login with the
+email and password YOU chose, or open http://localhost:3000/workspaces.
+Keep the Terminal window open. Control+C stops the web app, not MySQL.
+The same project folder reopens the same database.
+
+YOUR FIRST REAL USERS
+• Enrollment with a login: add a student in Learning → Student directory.
+  Their EMIS entry is created in the same institution. Fill any missing
+  program, class or demographic details in EMIS; none are guessed.
+• Enrollment without a login: enter the student in EMIS → Student directory.
+  The Learning directory lists that record as awaiting a login. In EMIS →
+  Users & access, create a Student login linked to that record, or choose
+  Add existing Tejasvi account and match its registered email.
+• Give a teacher the Faculty role linked to their faculty record. Students
+  see their own records; teachers see their assigned teaching. Finance and
+  other operations-only roles open the relevant EMIS sections.
+• New users change their temporary password once for the shared account.
+  Assignments and access are per organization. A corporate membership does
+  not grant access to a school or college.
+• In EMIS, the Learning panel shows live activity. An administrator can
+  publish an EMIS course allocation to the Learning subject catalog.
+  In a college this places the subject under its department, program and
+  semester. Teachers build lesson content and assessments in Learning.
+
+IF YOU GET STUCK
+• MySQL connection refused: start the local MySQL service, then reopen
+  Start-Tejasvi.command. With the Oracle Mac installer, use its MySQL pane
+  in System Settings. For Homebrew, run “brew services list” to check the
+  installed MySQL service and start that exact name.
+• Access denied during setup: enter your MySQL administrator credentials,
+  not your Tejasvi login. The setup user must be allowed to create a new
+  database and grant a dedicated account access to it.
+• Missing setup code: open the entire private link, including #setup=.
+  If you stopped before creating the owner, restart for a new link.
+• Port in use: stop the process using port 3000 and reopen the launcher.
+• Forgot an existing app password: open Set-User-Password.command in this
+  configured folder. No password is preinstalled.
+• Connection check: from this folder, “npm run doctor”.
+
+The ZIP is application source. It includes no real college records, private
+uploads or default logins. Use a clean ZIP when sharing it with your team.

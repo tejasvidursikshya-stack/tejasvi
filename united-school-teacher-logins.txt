@@ -1,0 +1,22 @@
+United School teacher logins (temporary passwords; each must be changed at first sign-in).
+Delete this file after handing them over.
+
+Ramesh Adhikari — class teacher, Grade 1 A
+  Email: ramesh.adhikari@united.edu.np
+  Password: UUIXREVptU1sy7NZ
+
+Krishna Shrestha — class teacher, Grade 2 A
+  Email: krishna.shrestha@united.edu.np
+  Password: zXrgj8R-2371JVXn
+
+Deepak Bhattarai — class teacher, Grade 3 A
+  Email: deepak.bhattarai@united.edu.np
+  Password: BN1SknyeZGYfghTW
+
+Binaya Dahal — class teacher, Grade 4 A
+  Email: binaya.dahal@united.edu.np
+  Password: EXkdHY7kyAUJDV9F
+
+Jagannath Gautam — class teacher, Grade 5 A
+  Email: jagannath.gautam@united.edu.np
+  Password: QcerzG1olZW3h6p_

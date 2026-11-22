@@ -1,0 +1,15 @@
+import {unzipSync,zipSync,strFromU8,strToU8} from 'fflate';
+import type {Pair} from './atelier';
+export function xml(s:string){return s.replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g,'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&apos;");}
+export function deckBytes(template:Uint8Array,title:string,slides:Pair[]){
+ if(!slides.length||slides.length>12)throw Error('A deck needs 1–12 slides.');
+ const z=unzipSync(template),read=(n:string)=>strFromU8(z[n]),put=(n:string,s:string)=>{z[n]=strToU8(s);};
+ const first=read('ppt/slides/slide1.xml'),rels=read('ppt/slides/_rels/slide1.xml.rels');
+ let pres=read('ppt/presentation.xml'),pr=read('ppt/_rels/presentation.xml.rels'),types=read('[Content_Types].xml');const m=pres.match(/<p:sldId id="(\d+)" r:id="([^"]+)"\s*\/>/);if(!m)throw Error('Slide layout not available.');const ids:string[]=[];
+ slides.forEach((s,i)=>{const n=i+1,r=i?'rIdWorkshop'+n:m[2],v:Record<string,string>={TJ_DECK:title,TJ_TITLE:s.title,TJ_BODY:s.body,TJ_FOLIO:'TEJASVI CAMPUS     /     '+String(n).padStart(2,'0')+'     OF     '+String(slides.length).padStart(2,'0')};put('ppt/slides/slide'+n+'.xml',first.replace(/TJ_DECK|TJ_TITLE|TJ_BODY|TJ_FOLIO/g,k=>xml(v[k])));ids.push('<p:sldId id="'+(Number(m[1])+i)+'" r:id="'+r+'"/>');if(i){put('ppt/slides/_rels/slide'+n+'.xml.rels',rels);pr=pr.replace('</Relationships>','<Relationship Id="'+r+'" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide" Target="slides/slide'+n+'.xml"/></Relationships>');types=types.replace('</Types>','<Override PartName="/ppt/slides/slide'+n+'.xml" ContentType="application/vnd.openxmlformats-officedocument.presentationml.slide+xml"/></Types>');}});
+ put('ppt/presentation.xml',pres.replace(m[0],ids.join('')));put('ppt/_rels/presentation.xml.rels',pr);put('[Content_Types].xml',types);return zipSync(z,{level:6});
+}
+export function printable(title:string,kind:string,items:Pair[]){return '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+xml(title)+'</title><style>body{max-width:740px;margin:3rem auto;padding:0 1rem;color:#18344a;font:17px/1.55 system-ui}small{color:#79523c}article{border-top:1px solid #bbc7ce;padding:1rem 0;break-inside:avoid}h1,h2{line-height:1.13}p{white-space:pre-wrap}.write{height:4rem;border-bottom:1px dashed #acbbc4}@media print{body{margin:0}}</style><small>TEJASVI CAMPUS / '+xml(kind)+'</small><h1>'+xml(title)+'</h1>'+items.map((p,i)=>'<article><small>'+String(i+1).padStart(2,'0')+'</small><h2>'+xml(p.title)+'</h2><p>'+xml(p.body)+'</p>'+(kind==='Worksheet'?'<div class="write"></div>':'')+'</article>').join('')+'</html>';}
+export function download(blob:Blob,filename:string){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
+export function safeName(title:string){return (title.replace(/[^\p{L}\p{N} -]+/gu,'').trim().slice(0,65)||'Tejasvi-resource').replace(/\s+/g,'-');}
+

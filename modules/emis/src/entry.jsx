@@ -1,0 +1,15 @@
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import Workspace from './main.jsx';
+import './styles.css';
+import './workflows.css';
+import './readability.css';
+import './tejasvi-theme.css';
+import './dashboard.css';
+import './hierarchy.css';
+import './super-admin.css';
+import './shared-college.css';
+import './workspace-home.css';
+import './material-dashboard.css';
+import './role-home.css';
+createRoot(document.getElementById('root')).render(<Workspace/>);

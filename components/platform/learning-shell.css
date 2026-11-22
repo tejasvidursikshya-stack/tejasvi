@@ -1,0 +1,50 @@
+/* Tejasvi Learning workspace shell: light sidebar, calm top bar, consistent page spacing. */
+.tl-ws{--sidebar-width:264px;font-family:Manrope,var(--font-sans),system-ui,sans-serif}
+.tl-ws .workspace-main{background:#F5F8FB}
+
+/* Sidebar (desktop container gets .workspace-sidebar.tl-sidebar) */
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-inner]{background:#fff;color:#0B2440;border-right:1px solid #DCE4EE}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-header]{padding:24px 16px 8px;gap:12px}
+.tl-sidebar.workspace-sidebar .school-brand{color:#0B2440;gap:12px;padding:0 8px;font-weight:800;font-size:16px;line-height:1.3}
+.tl-sidebar.workspace-sidebar .school-brand img{height:44px;max-width:150px;object-fit:contain}
+.tl-sidebar.workspace-sidebar .school-monogram{width:44px;height:44px;border-radius:14px;background:var(--brand-primary,#063868);color:var(--brand-on-primary,#fff);display:grid;place-items:center;font-weight:800;font-size:15px;flex-shrink:0}
+.tl-sidebar.workspace-sidebar .sidebar-org{padding:0 8px;color:#0B2440;font-size:14px;font-weight:700;line-height:1.4}
+.tl-sidebar.workspace-sidebar .sidebar-org span{display:block;color:#566A7F;font-size:12.5px;font-weight:500;margin-top:2px}
+.tl-sidebar.workspace-sidebar .campus-emis-link{margin:0;padding:0 12px;min-height:40px;border-radius:12px;border:1px solid #DCE4EE;background:#F5F8FB;color:#0B2440;font-size:14px;font-weight:700;gap:8px}
+.tl-sidebar.workspace-sidebar .campus-emis-link:hover{background:#E6EFF9;border-color:#B9C7D6}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-content]{padding:8px 16px 16px}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-footer]{padding:16px;border-top:1px solid #EEF3F8;color:#566A7F}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-footer] .quiet-link{display:flex;align-items:center;gap:12px;width:100%;min-height:44px;padding:0 16px;border-radius:12px;color:#1C3550;font-size:14.5px;font-weight:600}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-footer] .quiet-link:hover{background:#FDECEA;color:#B3261E}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-footer]>p{padding:0 16px;margin-top:8px!important;color:#566A7F}
+
+/* Task navigation (desktop and the mobile sheet) */
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-inner] nav.tj-tasknav,[data-mobile=true] nav.tj-tasknav{color:#1C3550;display:flex;flex-direction:column;gap:8px}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-inner] .tj-nav-group,[data-mobile=true] .tj-tasknav .tj-nav-group{border:0;padding:0;margin:0}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-inner] .tj-nav-group ul,[data-mobile=true] .tj-tasknav .tj-nav-group ul{display:flex;flex-direction:column;gap:2px;margin:0;padding:0;list-style:none}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-inner] .tj-nav-group .tj-nav-heading,[data-mobile=true] .tj-tasknav .tj-nav-group .tj-nav-heading{min-height:36px;padding:8px 16px;margin-top:8px;border-radius:10px;color:#566A7F;font-size:11.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-inner] .tj-nav-group:first-child .tj-nav-heading,[data-mobile=true] .tj-tasknav .tj-nav-group:first-child .tj-nav-heading{margin-top:0}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-inner] .tj-nav-group .tj-nav-heading svg{opacity:.7}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-inner] .tj-nav-group .tj-nav-link,[data-mobile=true] .tj-tasknav .tj-nav-group .tj-nav-link{min-height:44px;padding:8px 16px;gap:12px;border-radius:12px;color:#1C3550;font-size:14.5px;font-weight:600;box-shadow:none}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-inner] .tj-nav-group :is(.tj-nav-heading,.tj-nav-link):hover,[data-mobile=true] .tj-tasknav .tj-nav-group :is(.tj-nav-heading,.tj-nav-link):hover{background:#EEF3F8;color:#0B2440}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-inner] .tj-nav-group .tj-nav-link[aria-current=page],[data-mobile=true] .tj-tasknav .tj-nav-group .tj-nav-link[aria-current=page]{background:color-mix(in srgb,var(--brand-primary,#063868) 10%,#fff);color:color-mix(in srgb,var(--brand-primary,#063868) 80%,#0F55A8);font-weight:700;box-shadow:inset 3px 0 0 #FF7800}
+.tl-sidebar.workspace-sidebar [data-slot=sidebar-inner] .tj-tasknav :focus-visible{outline:3px solid #0F55A8;outline-offset:-3px}
+
+/* Top bar */
+.tl-ws .workspace-topbar{gap:16px;background:#fff;border-bottom:1px solid #DCE4EE;backdrop-filter:none}
+@media(min-width:768px){.tl-ws .workspace-topbar{height:72px;padding:0 32px}}
+.tl-ws .workspace-topbar p{font-size:15px;font-weight:700;color:#0B2440}
+.tl-ws .workspace-topbar p .muted{color:#566A7F;font-weight:600}
+.tl-ws .workspace-topbar>div:last-child{gap:16px}
+.tl-ws .account-email{font-size:13.5px;color:#566A7F;font-weight:600}
+.tl-ws .account-avatar{width:40px;height:40px;background:var(--brand-primary,#063868);color:var(--brand-on-primary,#fff);font-weight:800;font-size:14px}
+
+/* Page area */
+.tl-ws .workspace-content{width:100%;max-width:1320px;margin-inline:auto;padding:24px 32px 48px}
+.tl-ws .status-message{border-radius:14px}
+@media(min-width:768px) and (max-width:1200px){.tl-ws .workspace-content{padding:24px 24px 48px}.tl-ws .workspace-topbar{padding:0 24px}}
+@media(max-width:767px){
+ .tl-ws:not(.student-workspace) .workspace-topbar{height:64px;padding:0 16px}
+ .tl-ws .account-email{display:none}
+ .tl-ws:not(.student-workspace) .workspace-content{padding:16px 16px 48px}
+}

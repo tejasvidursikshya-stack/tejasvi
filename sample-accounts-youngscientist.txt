@@ -1,0 +1,7 @@
+YoungScientist sample accounts (Reliance International Academy, Grade 6, 2083)
+SAMPLE DATA - delete these accounts before going live. Do not share or commit this file.
+
+Teacher | Sample Teacher (Reliance) | sample.teacher@example.org | dsGqRlpV2k7Tq7kS
+Student | Sample Student 1 (Reliance) | sample.student1@example.org | zyuE2nQzgwprWndz
+Student | Sample Student 2 (Reliance) | sample.student2@example.org | AGVqQwYN7rNKj2Kk
+Student | Sample Student 3 (Reliance) | sample.student3@example.org | zywnsGFlyjxrd4t2

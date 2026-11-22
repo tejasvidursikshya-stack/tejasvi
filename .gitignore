@@ -1,0 +1,11 @@
+.env*
+node_modules/
+.next/
+dist/
+storage/
+data/
+backups/
+*.tsbuildinfo
+
+build/
+.settings-*.tmp

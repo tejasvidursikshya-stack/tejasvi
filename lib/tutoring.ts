@@ -1,0 +1,11 @@
+export type CardKind='cue'|'flash';
+export type CardTheme='ocean'|'amber'|'iris';
+export type PracticeCard={front:string;back:string};
+export type TeacherCard=PracticeCard&{note:string};
+export type TutorDeck={id:string;title:string;kind:CardKind;theme:CardTheme;revision:number;cards:TeacherCard[]};
+export type DeckSummary={id:string;title:string;kind:CardKind;theme:CardTheme;revision:number;size:number;shared:number};
+export type SharedCourse={id:string;title:string;revision:number};
+export type CourseChoice={id:string;title:string};
+export const themes:Record<CardTheme,string>={ocean:'Ocean blue',amber:'Warm amber',iris:'Iris purple'};
+export const kinds:Record<CardKind,string>={cue:'Cue cards',flash:'Flashcards'};
+export const cardLimit=40;

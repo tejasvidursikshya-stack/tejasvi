@@ -1,0 +1,98 @@
+/* Organization selection: the homepage's photo-reveal cards, in a stable form grid. */
+.setup-wrap.setup-bright{max-width:1200px;margin:12px auto 48px}
+.setup-bright .org-bright-form{margin:0}
+.org-bright-heading{text-align:center;padding:24px 12px 32px}
+.org-bright-kicker{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:1.5px;font-weight:700;color:var(--brand-muted)}
+.org-bright-form .org-bright-heading h1{font-size:clamp(32px,3.5vw,52px);line-height:1.1;letter-spacing:-1.8px;margin:20px 0 16px;color:var(--brand-ink)}
+.org-bright-heading h1 em{font-family:Georgia,serif;font-weight:400;color:var(--brand-muted)}
+.org-bright-heading p{font-size:15px;line-height:1.8;color:var(--brand-muted);max-width:540px;margin:auto}
+.org-bright-types{border:0;padding:0;min-width:0}
+.org-bright-types legend{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.org-bright-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.org-bright-card{--org-paper:var(--brand-soft);--org-ink:var(--brand-ink);position:relative;display:block;isolation:isolate;min-height:385px;overflow:hidden;border-radius:26px;color:var(--org-ink);background:var(--org-paper);border:2px solid #ffffffd9;box-shadow:0 8px 20px color-mix(in srgb, var(--navy) 6.27%, transparent);cursor:pointer;transition:transform .35s,box-shadow .35s,color .35s}
+.org-bright-college{--org-paper:var(--brand-accent-soft);--org-ink:var(--brand-ink)}
+.org-bright-corporate{--org-paper:var(--brand-mid);--org-ink:var(--brand-ink)}
+.org-bright-edtech{--org-paper:var(--brand-accent-subtle);--org-ink:var(--brand-ink)}
+.org-bright-art,.org-bright-shade,.org-bright-cover{position:absolute;inset:0;pointer-events:none}
+.org-bright-art{z-index:-1}
+.org-bright-art img{width:100%;height:100%;object-fit:cover;object-position:60% center;transform:scale(1.04);transition:transform .65s}
+.org-bright-shade{background:linear-gradient(180deg,color-mix(in srgb, var(--navy) 76.86%, transparent),color-mix(in srgb, var(--navy) 14.51%, transparent) 32%,color-mix(in srgb, var(--navy) 85.1%, transparent) 58%,color-mix(in srgb, var(--navy) 98.82%, transparent))}
+.org-bright-cover{display:flex;align-items:flex-start;justify-content:flex-end;padding:90px 30px 0;background:var(--org-paper);transition:opacity .4s}
+.org-bright-cover svg{opacity:.28}
+.org-bright-top{display:block;padding:26px 48px 0 24px}
+.org-bright-eyebrow{display:block;font-size:9px;line-height:1.5;font-weight:600;letter-spacing:1px;margin-bottom:10px}
+.org-bright-top strong{font-size:28px;letter-spacing:-.8px;line-height:1.2;display:block}
+.org-bright-bottom{display:flex;flex-direction:column;gap:12px;padding:90px 24px 22px}
+.org-bright-headline{font-size:22px;font-weight:600;letter-spacing:-.5px;line-height:1.25;max-width:260px}
+.org-bright-description{font-size:13px;line-height:1.7;min-height:45px}
+.org-bright-tags{font-size:10px;line-height:1.6;font-weight:600}
+.org-bright-select{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;font-weight:600;border-top:1px solid #ffffff75;padding-top:14px;margin-top:4px}
+.org-bright-select>span{display:grid;place-items:center;border:1px solid currentColor;width:32px;height:32px;border-radius:50%;flex-shrink:0}
+.org-bright-card.is-selected{color:white;box-shadow:0 0 0 3px var(--navy),0 16px 36px color-mix(in srgb, var(--navy) 14.9%, transparent)}
+.org-bright-card.is-selected .org-bright-cover{opacity:0}
+.org-bright-card.is-selected .org-bright-art img{transform:scale(1)}
+.org-bright-card:focus-visible{outline:3px solid var(--brand-focus);outline-offset:5px}
+.org-bright-types:disabled .org-bright-card{cursor:wait;opacity:.65}
+@media(hover:hover) and (pointer:fine){.org-bright-card:hover{color:white;transform:translateY(-5px);box-shadow:0 18px 38px color-mix(in srgb, var(--navy) 14.9%, transparent)}.org-bright-card:hover .org-bright-cover{opacity:0}.org-bright-card:hover .org-bright-art img{transform:scale(1)}}
+@media(min-width:1450px){.org-bright-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.org-bright-card{min-height:425px}.org-bright-top strong{font-size:25px}.org-bright-bottom{padding-top:110px}.org-bright-description{min-height:68px}.org-bright-headline{min-height:55px}}
+@media(max-width:600px){.org-bright-grid{grid-template-columns:1fr;gap:20px}.org-bright-card{min-height:360px}.org-bright-top strong{font-size:30px}.org-bright-bottom{padding-top:75px}.org-bright-heading{padding-top:12px}.org-bright-heading p{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.org-bright-card,.org-bright-cover,.org-bright-art img{transition:none}.org-bright-card:hover{transform:none}}
+
+/* This form is used in the first-owner screen and the LMS shell. Keep its
+   sign-in-style controls independent of either page's layout or input reset. */
+.org-bright-form .org-bright-card{display:block;width:100%;padding:0;text-align:start;font-family:inherit}
+.org-bright-form [hidden]{display:none}
+.org-bright-form .org-sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;padding:0;border:0}
+.org-bright-form .org-details{
+  --control-line:#778b9d;
+  width:min(100%,40rem);margin:clamp(.75rem,2vw,1.75rem) auto 0;box-sizing:border-box;
+  padding:clamp(1.35rem,4vw,3rem);background:#fff;color:var(--brand-ink);
+  border:1px solid var(--brand-line);border-radius:1.35rem;
+  box-shadow:0 12px 40px -24px #15395840;text-align:start;
+}
+.org-details-header{margin:0 0 1.875rem}
+.org-details-topline{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.3rem 1rem;margin-bottom:1.25rem}
+.org-details-step{display:inline-flex;align-items:center;gap:.7rem;font-size:.875rem;line-height:1.4;font-weight:700;color:var(--brand-muted)}
+.org-details-mark{display:inline-grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:.85rem;background:var(--brand-soft);color:var(--brand-ink)}
+.org-details .org-details-change{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:44px;padding:.45rem .5rem;
+  border:0;border-radius:.5rem;background:transparent;color:var(--brand-ink);font:inherit;font-size:.875rem;line-height:1.4;font-weight:650;cursor:pointer}
+.org-details-change:hover,.org-details-change:focus-visible{background:var(--brand-soft)}
+.org-details .org-details-header h1{font-size:clamp(1.75rem,3.5vw,2.3rem);letter-spacing:-.045em;line-height:1.18;font-weight:700;
+  color:var(--brand-ink);margin:0 0 .65rem;overflow-wrap:break-word;scroll-margin-block:1rem}
+.org-details-header>p{margin:0;max-width:51ch;font-size:1rem;font-weight:400;line-height:1.6;color:var(--brand-muted)}
+.org-details .org-details-body,.org-details-extra{display:grid;grid-template-columns:minmax(0,1fr);gap:1.5rem}
+.org-details .org-details-body{margin:0;min-width:0;padding:0;border:0}
+.org-details-field{display:grid;gap:.5rem;min-width:0}
+.org-details-field>label{display:block;color:var(--brand-ink);font-size:1rem;font-weight:700;line-height:1.4;margin:0}
+.org-details-field>small{font-size:.875rem;line-height:1.5;font-weight:400;color:var(--brand-muted)}
+.org-details-control{position:relative;min-width:0}
+.org-details-control>svg{position:absolute;inset-inline-start:1rem;top:1.13rem;color:var(--brand-muted);pointer-events:none}
+.org-details .org-details-control :is(input,textarea){display:block;box-sizing:border-box;width:100%;min-width:0;min-height:3.5rem;
+  padding:.875rem 1rem .875rem 2.9rem;border:1px solid var(--control-line);border-radius:.65rem;background:white;color:var(--brand-ink);
+  font:inherit;font-weight:400;font-size:1.0625rem;line-height:1.5;text-align:start;box-shadow:none}
+.org-details .org-details-control textarea{resize:vertical;min-height:5.375rem}
+.org-details .org-details-control :is(input,textarea)::placeholder{color:var(--brand-muted);opacity:1}
+.org-details .org-details-control :is(input,textarea):hover{border-color:var(--brand-muted)}
+.org-details .org-details-control :is(input,textarea):focus{border-color:var(--brand-primary);outline:2px solid var(--brand-focus);outline-offset:2px}
+.org-details-control:focus-within>svg{color:var(--brand-primary)}
+.org-details .org-details-control :is(input,textarea):user-invalid{border-color:var(--destructive)}
+.org-details input:disabled,.org-details textarea:disabled{background:var(--brand-subtle);opacity:.7}
+.org-details-more{min-width:0;margin:0;border-block:1px solid var(--brand-line);background:var(--brand-subtle);border-radius:.4rem}
+.org-details-more summary{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .6rem;min-height:3.5rem;cursor:pointer;
+  padding:.8rem .75rem;list-style:none;color:var(--brand-ink);font-size:1rem;line-height:1.45;font-weight:700;border-radius:.4rem}
+.org-details-more summary::-webkit-details-marker{display:none}
+.org-details-more summary:hover{background:var(--brand-soft)}
+.org-details-more summary>svg{margin-inline-start:auto}
+.org-details-more[open] summary>svg{transform:rotate(180deg)}
+.org-details-optional{display:inline-block;color:var(--brand-muted);font-size:.85rem;font-weight:500}
+.org-details-extra{padding:1rem .75rem 1.4rem}
+.org-details .org-details-submit{display:flex;align-items:center;justify-content:center;gap:.65rem;
+  width:100%;min-height:3.5rem;margin:0;padding:.8rem 1rem;border:1px solid transparent;border-radius:.65rem;
+  background:var(--brand-accent,var(--orange));color:var(--brand-on-accent);font:inherit;font-size:1.0625rem;line-height:1.45;font-weight:700;text-align:center;cursor:pointer}
+.org-details .org-details-submit:hover{filter:brightness(.96)}
+.org-details :is(button,summary):focus-visible,.org-details-header h1:focus-visible{outline:2px solid var(--brand-focus);outline-offset:3px}
+.org-details button:disabled{opacity:.65;cursor:wait}
+.org-details-error{display:flex;align-items:flex-start;gap:.6rem;margin:0;padding:.8rem 1rem;border-radius:.6rem;background:#fff2ef;color:#942e20;font-size:.95rem;line-height:1.55;overflow-wrap:anywhere}
+.org-details-error svg{margin-top:.15rem}
+@media(max-width:420px){.org-details-extra{padding-inline:.4rem}.org-details-more summary{gap:.25rem .45rem;padding-inline:.45rem}.org-details-control>svg{inset-inline-start:.8rem}.org-details .org-details-control :is(input,textarea){padding-inline-start:2.5rem}}
+@media(forced-colors:active){.org-details-mark,.org-details .org-details-submit{border:1px solid ButtonText}}

@@ -1,0 +1,13 @@
+'use client';
+import {useState} from 'react';
+import type {Course} from '@/lib/platform-types';
+export function InstitutionLearning({courses,academic,college,learner,onCreate,onOpen,onStructure}:{courses:Course[];academic:boolean;college:boolean;learner:boolean;onCreate:()=>void;onOpen:(c:Course)=>void;onStructure?:()=>void}){
+ const [search,setSearch]=useState('');
+ const items=courses.filter(c=>Boolean(c.subjectId)===academic&&[c.title,c.audience,c.description].join(' ').toLowerCase().includes(search.toLowerCase()));
+ const title=academic?(college?'Academic subjects':'Subjects'):'Non-credit courses';
+ return <><div className="workspace-title"><div><p className="workspace-kicker">{college?'COLLEGE LEARNING':'SCHOOL LEARNING'}</p><h1>{learner?'My '+title.toLowerCase():title}</h1><p>{academic?(college?'Subject learning for your program and semester.':'Subject learning for each grade and section.'):'Optional, standalone learning outside the regular subject curriculum.'}</p></div>{!learner&&<button className="button button-orange" onClick={onCreate}>{academic?'Add subject content':'Create non-credit course'}</button>}</div>
+ {!learner&&academic&&<p className="data-note">Create the subject in Academic structure, then add its learning content here and assign it to the relevant batches. Use the audience label for the grade or program/semester. {onStructure&&<button className="quiet-link" onClick={onStructure}>Open academic setup</button>}</p>}
+ <label className="field">Search {title.toLowerCase()}<input type="search" value={search} onChange={e=>setSearch(e.target.value)} placeholder={academic?'Search title or grade / semester':'Search optional learning'}/></label>
+ <div className="course-grid">{items.map(c=><article key={c.id} className="course-card"><div className="course-card-body"><span className="badge">{academic?'SUBJECT':'NON-CREDIT'} · {c.status}</span><h2>{c.title}</h2><p>{c.audience}</p><p className="course-description">{c.description}</p><p>{c.unitIds?.length||0} units · {c.lessons.length} lessons</p><button className="button button-outline" onClick={()=>onOpen(c)}>{learner?'Open learning':academic?'Manage subject':'Manage course'}</button></div></article>)}</div>
+ {!items.length&&<section className="editor-section"><h2>{search?'No matching content':academic?'No subject content yet':'No non-credit courses yet'}</h2><p>{search?'Try another title or audience.':learner?'Your institution will publish and assign learning here.':academic?'Add content and select its curriculum subject. Existing content without a subject link is available under Non-credit courses.':'Create optional learning, or open existing content here and choose Academic subject if it belongs in the curriculum.'}</p></section>}</>;
+}

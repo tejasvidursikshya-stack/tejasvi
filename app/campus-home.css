@@ -1,0 +1,15 @@
+/* Single stylesheet list for both the Next.js homepage and the offline export. */
+@import './campus-story.css';
+@import './campus-banner.css';
+@import './campus-demo.css';
+@import './workshop-ui.css';
+@import './campus-atelier.css';
+@import './teaching-gallery.css';
+@import './campus-launch.css';
+
+@import './campus-journeys.css';
+@import './campus-detailed-demo.css';
+
+@import './campus-cinematic-flow.css';
+
+@import './campus-hero-navigation.css';

@@ -1,0 +1,10 @@
+export function meetingURL(value:string){try{if(/[\u0000-\u0020\u007f]/.test(value))return false;const u=new URL(value);return u.protocol==='https:'&&!u.username&&!u.password&&!!u.hostname}catch{return false}}
+export function pricePaisa(value:string){if(!/^\d{1,7}(\.\d{1,2})?$/.test(value))throw Error('Enter an NPR amount with at most two decimal places.');const [a,b='']=value.split('.');const n=Number(a)*100+Number(b.padEnd(2,'0'));if(n>100000000)throw Error('Maximum price is NPR 1,000,000.');return n}
+export function calendarEvent(s:{id:string;title:string;startsAt:string;endsAt:string;meetingUrl:string},now=new Date()){
+ const esc=(s:string)=>s.replaceAll('\\','\\\\').replaceAll('\r','').replaceAll('\n','\\n').replaceAll(';','\\;').replaceAll(',','\\,');
+ const stamp=(v:string|Date)=>new Date(typeof v==='string'?v.replace(' ','T')+'Z':v).toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'');
+ // Fold by UTF-8 octets for calendar clients, without splitting a Unicode character.
+ const fold=(line:string)=>{const parts=[];let current='',bytes=0;for(const c of line){const n=new TextEncoder().encode(c).length;if(bytes+n>74){parts.push(current);current=' ';bytes=1}current+=c;bytes+=n}parts.push(current);return parts.join('\r\n')};
+ return ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Tejasvi//Learning//EN','BEGIN:VEVENT','UID:'+s.id+'@tejasvi','DTSTAMP:'+stamp(now),'DTSTART:'+stamp(s.startsAt),'DTEND:'+stamp(s.endsAt),'SUMMARY:'+esc(s.title),'DESCRIPTION:'+esc(s.meetingUrl),'URL:'+s.meetingUrl,'END:VEVENT','END:VCALENDAR'].map(fold).join('\r\n')+'\r\n';
+}
+export function learnerBadges(done:number,passed:number,completed:number){return [{name:'First step',detail:'Mark your first lesson complete.',earned:done>=1},{name:'Learning momentum',detail:'Complete five current lessons.',earned:done>=5},{name:'Knowledge check',detail:'Pass a current course quiz.',earned:passed>=1},{name:'Course finisher',detail:'Complete a course and its current quiz, if attached.',earned:completed>=1}]}

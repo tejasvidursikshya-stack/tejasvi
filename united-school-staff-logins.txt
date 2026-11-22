@@ -1,0 +1,12 @@
+United School staff logins (temporary passwords; each must be changed at first sign-in).
+Delete this file after handing them over.
+
+Admin (United School)
+  Role: Admin
+  Email: admin.unitedschool@example.org
+  Password: yDHr4HFBsdWppvGZ
+
+Finance (United School)
+  Role: Finance Head
+  Email: finance.unitedschool@example.org
+  Password: JKwiGmPp0ecdhYR8

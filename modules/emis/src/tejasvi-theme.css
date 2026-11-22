@@ -1,0 +1,222 @@
+/* Fonts and semantic palette are shared with the existing Tejasvi LMS. */
+@font-face{font-family:Manrope;src:url('/assets/manrope-400.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Manrope;src:url('/assets/manrope-600.ttf') format('truetype');font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:Manrope;src:url('/assets/manrope-700.ttf') format('truetype');font-style:normal;font-weight:700;font-display:swap}
+
+:root{
+  --navy:#063868;
+  --orange:#ff7800;
+  --brand-primary:#063868;
+  --brand-accent:#ff7800;
+  --brand-on-primary:#ffffff;
+  --brand-on-accent:#101820;
+  --brand-on-primary-muted:color-mix(in srgb, #ffffff 78%, #063868);
+  --brand-ink:#063868;
+  --brand-muted:#536678;
+  --brand-subtle:color-mix(in srgb, #063868 2%, white);
+  --brand-soft:color-mix(in srgb, #063868 6%, white);
+  --brand-mid:color-mix(in srgb, #063868 13%, white);
+  --brand-line:color-mix(in srgb, #063868 13%, white);
+  --brand-line-strong:color-mix(in srgb, #063868 28%, white);
+  --brand-blue:color-mix(in srgb, #063868 65%, white);
+  --brand-primary-hover:color-mix(in srgb, #063868 88%, #101820);
+  --brand-accent-subtle:color-mix(in srgb, #ff7800 4%, white);
+  --brand-accent-soft:color-mix(in srgb, #ff7800 12%, white);
+  --brand-accent-mid:color-mix(in srgb, #ff7800 28%, white);
+  --brand-accent-strong:color-mix(in srgb, #ff7800 55%, #101820);
+  --brand-accent-hover:color-mix(in srgb, #ff7800 90%, white);
+  --brand-focus:#063868;
+  --background:#ffffff;
+  --foreground:#063868;
+  --card:#ffffff;
+  --card-foreground:#063868;
+  --popover:#ffffff;
+  --popover-foreground:#063868;
+  --primary:#063868;
+  --primary-foreground:#ffffff;
+  --secondary:color-mix(in srgb, #063868 6%, white);
+  --secondary-foreground:#063868;
+  --muted:#536678;
+  --muted-foreground:#536678;
+  --accent:#063868;
+  --accent-foreground:#063868;
+  --border:color-mix(in srgb, #063868 13%, white);
+  --input:color-mix(in srgb, #063868 28%, white);
+  --ring:#063868;
+  --ink:#063868;
+  --body:#536678;
+  --line:color-mix(in srgb, #063868 13%, white);
+  --sidebar:#ffffff;
+  --sidebar-foreground:#063868;
+  --sidebar-primary:#063868;
+  --sidebar-primary-foreground:#ffffff;
+  --sidebar-accent:color-mix(in srgb, #063868 6%, white);
+  --sidebar-accent-foreground:#063868;
+  --sidebar-border:color-mix(in srgb, #063868 13%, white);
+  --sidebar-ring:#063868;
+  --soft:color-mix(in srgb, #063868 6%, white);
+  --text:#063868;
+}
+
+:root{font-family:Manrope,Arial,sans-serif;font-size:16px;line-height:1.55;--sidebar-width:280px}
+body,.app{color:var(--brand-ink);background:var(--brand-subtle);-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font-family:inherit}
+h1,h2,h3{color:var(--brand-ink);font-weight:700}
+a,button{transition:background-color .15s,border-color .15s,color .15s}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid var(--brand-focus);outline-offset:3px}
+input,select,textarea{border-color:var(--brand-line-strong);color:var(--brand-ink);font-weight:400}
+input:focus,select:focus,textarea:focus{border-color:var(--brand-primary);box-shadow:0 0 0 3px var(--brand-soft)}
+input::placeholder,textarea::placeholder{color:var(--brand-muted);opacity:1}
+.btn{border-radius:8px;font-weight:600;box-shadow:none;border-color:var(--brand-line);color:var(--brand-ink)}
+.btn:hover{background:var(--brand-soft);border-color:var(--brand-line-strong)}
+.btn.primary{background:var(--brand-primary);border-color:var(--brand-primary);color:var(--brand-on-primary)}
+.btn.primary:hover{background:var(--brand-primary-hover);filter:none}
+a,.text-btn,.rollover-steps .current{color:var(--brand-ink)}
+.rollover-steps .current>span{color:var(--brand-on-primary)}
+.btn.danger{background:#a52b25;border-color:#a52b25;color:#fff}
+.icon-btn:hover,.text-size-toggle[aria-pressed=true]{background:var(--brand-soft)}
+.skip-link,.toast{background:var(--brand-primary);color:var(--brand-on-primary)}
+.toast{border-color:var(--brand-primary);box-shadow:0 8px 24px color-mix(in srgb,var(--brand-primary) 12%,transparent)}
+
+/* White navigation, with the LMS's orange active indicator. */
+.sidebar{background:#fff;border-color:var(--brand-line)}
+.brand-zone{min-height:88px;padding:20px 6px;gap:8px}
+.brand.small .brand-mark{background:var(--brand-soft);color:var(--brand-primary);width:40px;height:40px;border-radius:10px}
+.brand.small strong{font-size:1.375rem;letter-spacing:-.6px}
+.brand.small small{font-size:.75rem;color:var(--brand-muted);font-weight:400}
+.brand-zone .sidebar-mode{margin:0;padding:8px;width:36px;min-width:36px;min-height:36px;color:var(--brand-muted)}
+.college-switch{border-color:var(--brand-line);background:var(--brand-subtle);margin-bottom:16px;border-radius:10px}
+.college-avatar{background:var(--brand-soft);color:var(--brand-primary)}
+.nav-item,.group-toggle{color:var(--brand-muted);border-radius:8px;min-height:46px}
+.group-toggle{font-weight:600;gap:10px;font-size:.875rem;padding:12px 10px;line-height:1.45}
+.group-toggle[aria-expanded=true]{color:var(--brand-ink)}
+.nav-item:hover,.group-toggle:hover{background:var(--brand-subtle);color:var(--brand-ink)}
+.nav-item.selected{background:var(--brand-soft);color:var(--brand-ink);box-shadow:inset 3px 0 var(--brand-accent);font-weight:700}
+.nav-item.selected svg{color:inherit}
+.nav-group{margin:2px 0}
+.nav-children{border-color:var(--brand-line);padding:2px 0 6px 12px;margin-left:19px}
+.nav-group-actions{border-top:1px solid var(--brand-line);margin-top:10px;padding-top:12px}
+.nav-group-actions button{color:var(--brand-muted);font-size:.75rem}
+.nav-insights{padding-top:10px;margin-top:10px}
+.sidebar-bottom{border-top:1px solid var(--brand-line)}
+.avatar,.top-avatar{background:var(--brand-soft);color:var(--brand-primary);font-weight:600}
+.nav-compact .brand-zone{flex-direction:column;gap:12px;padding:18px 0}
+.nav-compact .brand-zone .sidebar-mode{width:40px;min-height:40px}
+.nav-compact .nav-item.selected{box-shadow:inset 3px 0 var(--brand-accent)}
+
+/* Shared workspace rhythm: one clear header, bounded content and quiet cards. */
+.topbar{min-height:78px;padding:14px 32px;background:#fff}
+.breadcrumb b{color:var(--brand-ink)}
+.top-actions{gap:10px}
+.global-search{background:var(--brand-subtle);border:1px solid var(--brand-line);padding:0 10px;border-radius:8px;min-height:42px}
+.global-search input{min-width:0;font-size:.875rem}
+.global-search kbd{font-size:.6875rem;background:#fff;color:var(--brand-muted)}
+.notification i{background:var(--brand-accent)}
+main{max-width:1450px;padding:0 32px 36px}
+.context-bar{padding:20px 0;min-height:70px;color:var(--brand-muted)}
+.context-bar select{border-color:var(--brand-line);border-radius:8px;font-size:.875rem}
+.context-bar label>svg:last-child{display:none}
+.context-bar>span>i{background:var(--brand-primary)}
+.page-title{gap:20px;margin:6px 0 24px}
+.page-title h1{font-size:1.875rem;line-height:1.3;letter-spacing:-.7px;font-weight:700}
+.page-title .eyebrow{font-size:.75rem;letter-spacing:.06em;font-weight:600}
+.page-title p{font-size:.9375rem;color:var(--brand-muted);line-height:1.7}
+.title-actions{padding-top:0;gap:10px}
+.card,.stat-card{border:1px solid var(--brand-line);border-radius:12px;box-shadow:none}
+.stat-card{padding:22px;min-height:154px}
+.stat-top{color:var(--brand-muted)}
+.stat-top>i,.stat-top>i.blue,.stat-top>i.purple{background:var(--brand-soft);color:var(--brand-primary);height:38px;width:38px;border-radius:10px}
+.stat-top>i.orange{background:var(--brand-accent-soft);color:var(--brand-accent-strong)}
+.stat-card>strong{font-size:1.75rem;font-weight:700;color:var(--brand-ink);letter-spacing:-.6px;font-variant-numeric:tabular-nums;white-space:normal;overflow-wrap:anywhere}
+.stat-bottom{color:var(--brand-muted)}
+.stat-card.clickable:hover{border-color:var(--brand-line-strong);box-shadow:0 3px 12px color-mix(in srgb,var(--brand-primary) 4%,transparent)}
+.section-head{padding:24px 24px 18px}
+.section-head h2{font-size:1.0625rem;font-weight:700}
+.section-head p{font-size:.875rem;line-height:1.65}
+.dashboard-grid,.dashboard-grid.lower{gap:22px}
+.view-tabs{border-color:var(--brand-line);gap:24px;margin:0 0 24px}
+.view-tabs>button{color:var(--brand-muted);font-size:.875rem;font-weight:600;padding:13px 0}
+.view-tabs>button.active{color:var(--brand-ink);font-weight:700}
+.view-tabs>button.active:after{background:var(--brand-accent);height:3px;border-radius:3px 3px 0 0;bottom:0}
+.chart-legend{flex-wrap:wrap;row-gap:8px}
+.green-dot{background:var(--brand-primary)}
+.light-dot{background:var(--brand-line)}
+.task-icon.warm{background:var(--brand-accent-soft);color:var(--brand-accent-strong)}
+.card-footer-btn{background:#fff;color:var(--brand-ink);font-weight:600}
+.card-footer-btn:hover{background:var(--brand-subtle)}
+.qaa-progress{background:var(--brand-subtle)}
+.page-footer{color:var(--brand-muted);font-size:.75rem;margin-top:30px}
+
+/* College information is a dedicated dashboard view, not another long header. */
+.college-summary{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--brand-line);border-radius:12px;padding:20px 24px;margin-bottom:24px}
+.college-summary>.profile-emblem{height:48px;width:48px;border-radius:12px}
+.college-summary>div{flex:1;min-width:0}
+.college-summary h2{font-size:1.0625rem;line-height:1.5;margin:0 0 4px;overflow-wrap:anywhere}
+.college-summary p{font-size:.875rem;color:var(--brand-muted);margin:0;line-height:1.6;overflow-wrap:anywhere}
+.college-summary>.btn{flex-shrink:0}
+.profile-emblem{background:var(--brand-soft);color:var(--brand-primary)}
+.college-profile-heading{padding:24px}
+.college-profile-heading h2{font-size:1.375rem}
+.college-details summary{background:var(--brand-subtle)}
+.profile-facts{gap:24px}
+.profile-facts dd{font-weight:600}
+.college-direction{padding-bottom:26px}
+.college-direction p{line-height:1.8}
+.overview-section-heading h2{font-size:1.25rem}
+.learning-card{background:var(--brand-subtle);border-color:var(--brand-line)}
+.learning-card>svg{color:var(--brand-primary)}
+.learning-card .btn{background:#fff}
+
+/* Data surfaces use the same legible hierarchy across modules. */
+th{background:var(--brand-subtle);color:var(--brand-muted);font-size:.8125rem;font-weight:600}
+td{color:var(--brand-ink);font-size:.875rem;padding-top:15px;padding-bottom:15px}
+td b{font-weight:600}
+td small{color:var(--brand-muted);font-size:.8125rem}
+.records-toolbar{padding:20px 24px}
+.table-search input{font-size:.9375rem}
+.table-filters select{font-size:.875rem}
+.module-stats strong{font-weight:700;color:var(--brand-ink)}
+.module-stats span{font-size:.8125rem;color:var(--brand-muted)}
+.badge.green{background:#eaf6ef;color:#236442}
+.badge.red{background:#fff0ed;color:#a52b25}
+.badge.amber{background:#fff5e2;color:#795513}
+.badge.neutral{background:var(--brand-soft);color:var(--brand-muted)}
+.badge.blue{background:var(--brand-soft);color:var(--brand-primary)}
+.badge.purple{background:#f2eef9;color:#644b8c}
+.error-box{background:#fff0ed;border-color:#efc4bc;color:#a52b25}
+.lms-notice{background:var(--brand-soft);border-color:var(--brand-accent);color:var(--brand-ink)}
+.lms-progress progress{accent-color:var(--brand-primary)}
+.theme-summary{border-bottom:1px solid var(--brand-line);padding-bottom:20px;margin-bottom:20px}
+.theme-summary .theme-summary-title{font-weight:600;color:var(--brand-ink);font-size:.875rem;margin:0 0 14px}
+.theme-swatches{display:flex;gap:20px;flex-wrap:wrap}
+.theme-swatches>span{display:flex;align-items:center;gap:8px;font-size:.8125rem;color:var(--brand-muted)}
+.theme-swatches i{height:24px;width:24px;border:1px solid var(--brand-line);border-radius:50%}
+.theme-summary p{font-size:.8125rem;color:var(--brand-muted);margin:12px 0 0;line-height:1.8}
+
+/* EMIS sign-in uses the same navy, orange and white palette as Tejasvi. */
+.auth-story{background:var(--brand-primary);color:var(--brand-on-primary)}
+.auth-story h1{color:var(--brand-on-primary);font-weight:600;letter-spacing:-1.4px}
+.auth-story .brand-mark{background:var(--brand-accent);color:var(--brand-on-accent)}
+.auth-story .eyebrow.light{color:var(--brand-on-primary-muted)}
+.story-content>p,.auth-story>footer{color:var(--brand-on-primary-muted)}
+.auth-form-area{background:#fff}
+.auth-form{max-width:400px}
+.auth-form h2{font-weight:700;font-size:1.875rem;letter-spacing:-.6px}
+.auth-form>label{font-weight:600;font-size:.875rem}
+.auth-form .mini-icon{background:var(--brand-soft);color:var(--brand-primary)}
+.auth-form .btn{min-height:48px}
+.art-sun{background:var(--brand-accent)}
+.art-building{background:color-mix(in srgb,#fff 14%,var(--brand-primary));border-color:var(--brand-blue)}
+.art-building.back i{background:var(--brand-blue);border-color:var(--brand-blue)}
+.art-building.main{background:var(--brand-blue)}
+.art-building.main>svg{color:var(--brand-primary)}
+.art-building.main span{background:var(--brand-primary)}
+.art-plant{background:var(--brand-accent)}
+.art-card{background:#fff;color:var(--brand-ink);border-color:var(--brand-line)}
+
+@media(max-width:1250px){.topbar{padding-inline:24px}.top-actions{gap:8px}.global-search{width:170px}.text-size-toggle span{display:none}.stats-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-grid,.dashboard-grid.lower{grid-template-columns:1fr}}
+@media(max-width:1000px){.nav-compact .brand-zone{flex-direction:row;justify-content:space-between;padding:20px 6px}.topbar{padding-inline:20px}main{padding-inline:24px}.college-summary{flex-wrap:wrap}.college-summary>div{flex-basis:calc(100% - 70px)}}
+@media(max-width:700px){.topbar{min-height:66px;padding:10px 12px}.top-actions{gap:6px}main{padding:0 16px 28px}.page-title h1{font-size:1.625rem}.global-search{width:42px;padding:0}.global-search:focus-within{background:#fff;border-color:var(--brand-primary)}.global-search:focus-within input{opacity:1}.context-bar{min-height:60px;padding:14px 0}.college-summary{padding:18px;gap:12px;margin-bottom:20px}.college-summary>.btn{width:100%}.college-summary h2{font-size:1rem}.view-tabs{gap:22px;overflow-x:auto}.view-tabs>button{font-size:.8125rem}.stat-card{padding:17px;min-height:150px}.stat-card>strong{font-size:1.5rem;white-space:normal;overflow-wrap:anywhere}.stat-top>i{width:32px;height:32px}.section-head{padding:20px}.college-profile-heading h2{font-size:1.25rem}.records-toolbar{padding:18px}.profile-facts{grid-template-columns:1fr}.story-content h1{font-size:2rem}.auth-form h2{font-size:1.625rem}.auth-form-area{padding:24px}}
+@media(max-width:380px){.stats-grid{grid-template-columns:1fr}.stat-card{min-height:140px}.topbar .breadcrumb b{max-width:84px}}
+@media(prefers-reduced-motion:reduce){a,button{transition:none}}
+@media print{:root,:root[data-text-size=large]{font-size:12px}body,.app{background:#fff}.dashboard-tabs,.college-summary>.btn{display:none}.page-title h1{font-size:24px}}

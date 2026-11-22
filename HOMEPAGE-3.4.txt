@@ -1,0 +1,47 @@
+TEJASVI CAMPUS 3.4 — CREATOR STUDIO & LMS DASHBOARD
+
+QUICK LOOK
+Open the separate Tejasvi-Campus-Homepage-Preview.html in a desktop browser.
+No installation is required. Click Product demo for the dashboard and edition
+chart, or AI Creator Studio for the animated collection and worked examples.
+
+UPDATE ON A MAC (CURRENT CAMPUS 3.0, 3.1, 3.2 OR 3.3)
+1. Stop the running Campus Terminal with Control+C. Leave MySQL on and keep
+   your normal backup.
+2. Unzip Tejasvi-Campus-3.4.0.zip. In the NEW Tejasvi-Campus-3.4 folder,
+   double-click Update-Homepage.command.
+3. Select the ORIGINAL configured Campus folder you normally run.
+4. Open Start-Tejasvi.command in that ORIGINAL folder. After the rebuild,
+   visit http://localhost:3000/ and refresh.
+The updater checks for local source changes and backs up its edits. It
+never copies settings or uploads. The next normal startup applies pending
+migrations; 019 adds resource-sharing metadata to the existing studio
+draft table. No samples, default users or institutions are inserted.
+New installation? Use Start-Tejasvi.command and follow START-HERE.txt.
+
+ON THE HOMEPAGE
+• In the demo, select an edition. The left dashboard lets you perform an
+  office or training task and try the learner view. The right chart compares
+  the editions using a visible checklist. No external vendor scores are used.
+• In Creator Studio, choose Create, Build, Assist or Plan to change plates.
+  Open a sample or select one of the six output formats. Try the quiz,
+  turn flashcards, download slides or render a short silent lesson video.
+
+IN THE LMS
+1. Sign in with an authorized school/college administrator or teacher
+   account, or as a corporate training administrator.
+2. In the Learning workspace, open Workspace dashboard or AI Studio.
+3. Choose a tool, enter a topic and audience, and add source notes. Start
+   a writing draft works without an AI key. Generate AI kit requires an
+   enabled organization, a configured provider and explicit confirmation.
+4. In the review desk select a format, choose Edit this output, then Save
+   edits. Export PPTX, printable activities/cards/storybooks or a silent
+   video (WebM or MP4, according to browser support).
+5. Import a reviewed draft for later publication, or use Publish reviewed
+   course to create a new course with assigned access after review. Already
+   imported materials can be shared/withdrawn from the studio. Learners
+   open Shared learning materials inside a course they can access.
+Source notes, facilitation notes and graded quiz answer keys are not part
+of the learner resource pack. Corporate workspaces do not include EMIS.
+
+See docs/creator-studio.md for access, setup, formats and maintenance.

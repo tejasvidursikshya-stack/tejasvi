@@ -1,0 +1,3 @@
+import readline from 'node:readline/promises';
+import { Writable } from 'node:stream';
+export function prompts(){let muted=false;const output=new Writable({write(chunk,_encoding,callback){if(!muted)process.stdout.write(chunk);callback()}});const rl=readline.createInterface({input:process.stdin,output,terminal:!!process.stdin.isTTY});return {async ask(label,fallback=''){const answer=await rl.question(label+(fallback?` [${fallback}]`:'')+': ');return answer.trim()||fallback},async secret(label){process.stdout.write(label+': ');muted=true;try{return await rl.question('')}finally{muted=false;process.stdout.write('\n')}},close(){rl.close()}}}

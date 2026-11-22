@@ -1,0 +1,10 @@
+/* Keep the original Tejasvi design; allow space for its new ERP navigation item. */
+@media(max-width:1000px){
+  .tejasvi-joy.jy-suite .jy-desktop{display:none}
+  .tejasvi-joy.jy-suite .jy-menu{display:block}
+}
+.th-emis{font-size:14px;font-weight:700;color:#0b3866;text-decoration:none;white-space:nowrap;padding:10px 12px;border:1px solid #b9cbdc;border-radius:10px}
+.th-emis:hover,.th-emis:focus-visible{background:#eef4fa}
+.suite-return-link{display:flex;align-items:center;gap:9px;padding:12px;margin-bottom:12px;color:var(--brand-primary,#0b3866);background:#f0f5fa;border:1px solid #cad7e4;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none}
+@media(max-width:1180px){.th-suite .th-desktop-nav{display:none}.th-suite .th-menu-toggle{display:inline-flex}}
+@media(max-width:560px){.th-suite .th-emis{display:none}}

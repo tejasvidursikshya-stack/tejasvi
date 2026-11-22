@@ -1,0 +1,4 @@
+import { randomBytes, scrypt as derive, timingSafeEqual } from 'node:crypto';
+function scrypt(password:string,salt:string,emis=false){return new Promise<Buffer>((resolve,reject)=>derive(password,salt,64,{N:emis?16384:32768,r:8,p:1,maxmem:64*1024*1024},(error,key)=>error?reject(error):resolve(key)))}
+export async function hashPassword(password:string){const salt=randomBytes(16).toString('hex');return `scrypt:${salt}:${(await scrypt(password,salt)).toString('hex')}`}
+export async function verifyPassword(password:string,stored:string){const [scheme,salt,hash]=stored.split(':');if(!['scrypt','emis'].includes(scheme)||!salt||!hash)return false;const key=await scrypt(password,salt,scheme==='emis'),expected=Buffer.from(hash,'hex');return key.length===expected.length&&timingSafeEqual(key,expected)}

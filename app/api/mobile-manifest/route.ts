@@ -1,0 +1,4 @@
+import {publicBrand} from '@/lib/branding';
+import {brandName} from '@/lib/brand-theme';
+export const dynamic='force-dynamic';
+export async function GET(request:Request){const org=new URL(request.url).searchParams.get('org'),b=org?await publicBrand(org):null;if(org&&!b)return new Response('School not found',{status:404});const home=b?'/school/'+b.id:'/login';return Response.json({id:home,name:b?brandName(b as any):'Tejasvi Learning',short_name:b?b.name.slice(0,30):'Tejasvi',start_url:home,scope:'/',display:'standalone',background_color:'#ffffff',theme_color:b?.primaryColor||'#063868',icons:[{src:b?`/api/mobile-icon?org=${b.id}&size=192`:'/mobile-192.png',sizes:'192x192',type:'image/png'},{src:b?`/api/mobile-icon?org=${b.id}&size=512`:'/mobile-512.png',sizes:'512x512',type:'image/png'}]},{headers:{'Content-Type':'application/manifest+json','Cache-Control':'no-store'}})}

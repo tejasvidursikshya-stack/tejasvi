@@ -1,0 +1,306 @@
+[
+  {
+    "path": "Build-Android.command",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "38e3976b2fea03e950eaafbdffa38a1157fc9cfcbe857e2e7484c2db2ead3f13"
+    },
+    "after": "38e3976b2fea03e950eaafbdffa38a1157fc9cfcbe857e2e7484c2db2ead3f13"
+  },
+  {
+    "path": "README.md",
+    "before": {
+      "3.9.0": "8e746514c467e65fdbabe0fdb3fa5bd31421b11bf5025f4d72cdf925480e84dd",
+      "3.10.0": "64c4e5bf1c1d40a3d3ce73ced49f9c67348f51a925f22ae44d11e41401ff4c76"
+    },
+    "after": "64c4e5bf1c1d40a3d3ce73ced49f9c67348f51a925f22ae44d11e41401ff4c76"
+  },
+  {
+    "path": "START-HERE.txt",
+    "before": {
+      "3.9.0": "c07cb59c13fd8deefe0e7ac6bf08d4f1343b143c5297424897c96cdbf2ca3072",
+      "3.10.0": "e82905659b2a849c623f4a4d3b20a16ea10f0d16cc354c00d8606187b18679f3"
+    },
+    "after": "e82905659b2a849c623f4a4d3b20a16ea10f0d16cc354c00d8606187b18679f3"
+  },
+  {
+    "path": "Test-Android-USB.command",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "826be5ab118345d6aeacf6c1c3c2b9754f9417a0309a6293a733f13ca2e878b9"
+    },
+    "after": "826be5ab118345d6aeacf6c1c3c2b9754f9417a0309a6293a733f13ca2e878b9"
+  },
+  {
+    "path": "android/.gitignore",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "019b6590a0ca74f2c3dcecf570a94877dc9d0d2fd097780c4a1d03ab6f038238"
+    },
+    "after": "019b6590a0ca74f2c3dcecf570a94877dc9d0d2fd097780c4a1d03ab6f038238"
+  },
+  {
+    "path": "android/README.md",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "66f313e5c418f6d40997e055cf685359763311c2e7d58f86ebb9e49530cb4236"
+    },
+    "after": "66f313e5c418f6d40997e055cf685359763311c2e7d58f86ebb9e49530cb4236"
+  },
+  {
+    "path": "android/app/build.gradle.kts",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "afaa1889a84e8f4291fd2b870d7629351697df5baa88c1c9eeb8bd191bd9ee70"
+    },
+    "after": "afaa1889a84e8f4291fd2b870d7629351697df5baa88c1c9eeb8bd191bd9ee70"
+  },
+  {
+    "path": "android/app/src/debug/res/xml/network_security_config.xml",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "ba743d0f1f6a317c07e36f06ac2eb9bc2cfd56a285e24dcfe8d53e4130df8597"
+    },
+    "after": "ba743d0f1f6a317c07e36f06ac2eb9bc2cfd56a285e24dcfe8d53e4130df8597"
+  },
+  {
+    "path": "android/app/src/main/AndroidManifest.xml",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "93e00462745b42fc200198d5799420905ae4a77d07c17e595d7193de4546c036"
+    },
+    "after": "93e00462745b42fc200198d5799420905ae4a77d07c17e595d7193de4546c036"
+  },
+  {
+    "path": "android/app/src/main/java/com/tejasvi/campus/ApiClient.kt",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "f971791c39498f1c88a3477fa954af625dae80244c21295b7a4f923ec9fa7442"
+    },
+    "after": "f971791c39498f1c88a3477fa954af625dae80244c21295b7a4f923ec9fa7442"
+  },
+  {
+    "path": "android/app/src/main/java/com/tejasvi/campus/CampusViewModel.kt",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "32dfd0384d30ab8c2776055dda0ff7373108aa257b5db77c644a9d516fd29876"
+    },
+    "after": "32dfd0384d30ab8c2776055dda0ff7373108aa257b5db77c644a9d516fd29876"
+  },
+  {
+    "path": "android/app/src/main/java/com/tejasvi/campus/MainActivity.kt",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "274820865b13abb2af3d0c0717d5e1b4cffdebaae44d9bc184a6b28195b934ce"
+    },
+    "after": "274820865b13abb2af3d0c0717d5e1b4cffdebaae44d9bc184a6b28195b934ce"
+  },
+  {
+    "path": "android/app/src/main/java/com/tejasvi/campus/ServerAddress.kt",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "5d0cc8b8222efae18a1a9d271b297f45e37bc880083d9b6b73f416ae0ce59dec"
+    },
+    "after": "5d0cc8b8222efae18a1a9d271b297f45e37bc880083d9b6b73f416ae0ce59dec"
+  },
+  {
+    "path": "android/app/src/main/java/com/tejasvi/campus/SessionStore.kt",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "f9f96b21bfd0bb21ae88625139aeaeba9c4b765a97bd1df8408c41d7f69439b8"
+    },
+    "after": "f9f96b21bfd0bb21ae88625139aeaeba9c4b765a97bd1df8408c41d7f69439b8"
+  },
+  {
+    "path": "android/app/src/main/res/drawable/ic_tejasvi.xml",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "9c91a59c9558a0b78795cf40e89ec54808009e9bb78f787c8c4ad5f4fabf1d4a"
+    },
+    "after": "9c91a59c9558a0b78795cf40e89ec54808009e9bb78f787c8c4ad5f4fabf1d4a"
+  },
+  {
+    "path": "android/app/src/main/res/values/styles.xml",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "7cb087a3d12a8560a5ce96e04cfdc109f55e8a06b2a375438558f9e84b94fc2a"
+    },
+    "after": "7cb087a3d12a8560a5ce96e04cfdc109f55e8a06b2a375438558f9e84b94fc2a"
+  },
+  {
+    "path": "android/app/src/main/res/xml/backup_rules.xml",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "d7b72c86779ef54cb72491becf57a23dd318532d2699f5359a94710754766ffe"
+    },
+    "after": "d7b72c86779ef54cb72491becf57a23dd318532d2699f5359a94710754766ffe"
+  },
+  {
+    "path": "android/app/src/main/res/xml/file_paths.xml",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "540aabdc3931f81da42efb7e866d876d8b632a8e27ff4bc8330f149b9b3892ef"
+    },
+    "after": "540aabdc3931f81da42efb7e866d876d8b632a8e27ff4bc8330f149b9b3892ef"
+  },
+  {
+    "path": "android/app/src/main/res/xml/network_security_config.xml",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "4977359e8fdf18f62a65aba35143dd0651cd28a3e2230a54f94b7953c435f580"
+    },
+    "after": "4977359e8fdf18f62a65aba35143dd0651cd28a3e2230a54f94b7953c435f580"
+  },
+  {
+    "path": "android/app/src/test/java/com/tejasvi/campus/ApiClientTest.kt",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "1bcf525c36d38c026ba930da1383c6117d84231b3f7c50890bf5f9a91eab5539"
+    },
+    "after": "1bcf525c36d38c026ba930da1383c6117d84231b3f7c50890bf5f9a91eab5539"
+  },
+  {
+    "path": "android/app/src/test/java/com/tejasvi/campus/ServerAddressTest.kt",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "5a9174b5368df3b486546e65036eba9ad730374bf2245548cc64a1af4b63feef"
+    },
+    "after": "5a9174b5368df3b486546e65036eba9ad730374bf2245548cc64a1af4b63feef"
+  },
+  {
+    "path": "android/build.gradle.kts",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "b7e8343ad7c348e87a1dbdcb0736e92416771bdb70490acd5f543249beba8a70"
+    },
+    "after": "b7e8343ad7c348e87a1dbdcb0736e92416771bdb70490acd5f543249beba8a70"
+  },
+  {
+    "path": "android/gradle/wrapper/gradle-wrapper.jar",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+    },
+    "after": "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f"
+  },
+  {
+    "path": "android/gradle/wrapper/gradle-wrapper.properties",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "2ff4b3a4d66bfae8efff62e5995527043ba34115e8634d201681a859d38b9cbf"
+    },
+    "after": "2ff4b3a4d66bfae8efff62e5995527043ba34115e8634d201681a859d38b9cbf"
+  },
+  {
+    "path": "android/gradle.properties",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "678c35a27eeda302d6a960484179d118d08fb1edf05c1b40745bc7aed6e88f03"
+    },
+    "after": "678c35a27eeda302d6a960484179d118d08fb1edf05c1b40745bc7aed6e88f03"
+  },
+  {
+    "path": "android/gradlew",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "734b3879d3501dce471cf0522d3bcbafe76873d9fc5129345b67fb43bd15e933"
+    },
+    "after": "734b3879d3501dce471cf0522d3bcbafe76873d9fc5129345b67fb43bd15e933"
+  },
+  {
+    "path": "android/gradlew.bat",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f"
+    },
+    "after": "57931b17dd228e5c24dac90e815d0bf82477e831a4618dfab4136f5446b42a9f"
+  },
+  {
+    "path": "android/pilot/Tejasvi-Android-Pilot.apk",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "901e758c9a510bb9d76ce533cb6bb498514b49e80ce9feee917895c02741f7f9"
+    },
+    "after": "901e758c9a510bb9d76ce533cb6bb498514b49e80ce9feee917895c02741f7f9"
+  },
+  {
+    "path": "android/settings.gradle.kts",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "1a4af8835b180a15ee3a178d5f0316ee94a4f412a4e48fc20a968fe302add4eb"
+    },
+    "after": "1a4af8835b180a15ee3a178d5f0316ee94a4f412a4e48fc20a968fe302add4eb"
+  },
+  {
+    "path": "app/api/mobile/v1/[...path]/route.ts",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "1dcabd6464b517adfea6afed1946ea71fa9f1aaefa4e1d60da244921d4cacf53"
+    },
+    "after": "1dcabd6464b517adfea6afed1946ea71fa9f1aaefa4e1d60da244921d4cacf53"
+  },
+  {
+    "path": "app/api/platform/route.ts",
+    "before": {
+      "3.9.0": "f74fd1227fcf6b4957c2e382a8e926815f5dae4a600d3d0250b03640a9b5a37d",
+      "3.10.0": "e52075e718e2b056e09933d0cd8e01d4039681c12187e50a3fa29f04669d5a4c"
+    },
+    "after": "e52075e718e2b056e09933d0cd8e01d4039681c12187e50a3fa29f04669d5a4c"
+  },
+  {
+    "path": "database/migrations/025_mobile_sessions.sql",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "d1d499f40b684035aec50c8d3891a8de71f3a16280eec42d146fafc981b36120"
+    },
+    "after": "d1d499f40b684035aec50c8d3891a8de71f3a16280eec42d146fafc981b36120"
+  },
+  {
+    "path": "docs/android-pilot.html",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "8a1c262449af375b88bc77d1b05bd5a5242ce17b13ceb67d59e41cc087dfa5ce"
+    },
+    "after": "8a1c262449af375b88bc77d1b05bd5a5242ce17b13ceb67d59e41cc087dfa5ce"
+  },
+  {
+    "path": "docs/android-validation.md",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "1b5f27680fb907c164c410682f8028a4e81c74beb36fc659dc3e2a99570ce67b"
+    },
+    "after": "1b5f27680fb907c164c410682f8028a4e81c74beb36fc659dc3e2a99570ce67b"
+  },
+  {
+    "path": "lib/auth.ts",
+    "before": {
+      "3.9.0": "1d51840d1f1c6712d318dd281b0cb7b44b38b404cd4bdf8bfd903b4bca92a117",
+      "3.10.0": "55d703f7367531151f29cc724f1d9a258e028ab7e2dc92018deec3054b655d6a"
+    },
+    "after": "55d703f7367531151f29cc724f1d9a258e028ab7e2dc92018deec3054b655d6a"
+  },
+  {
+    "path": "lib/mobile-sessions.ts",
+    "before": {
+      "3.9.0": null,
+      "3.10.0": "ba4c6fe4190687077248933508f5437e37962de061691ded3dca5c791ba458b5"
+    },
+    "after": "ba4c6fe4190687077248933508f5437e37962de061691ded3dca5c791ba458b5"
+  },
+  {
+    "path": "package-lock.json",
+    "before": {
+      "3.9.0": "7a899549d088749c38ddb7c2886b9f5a7d262a2cdf9a62eae8e96411cdd029f9",
+      "3.10.0": "4ee5b94051ed44f7e1ccb1f68bb507c28dd6268102d91d36ff6a43fa99988c88"
+    },
+    "after": "4ee5b94051ed44f7e1ccb1f68bb507c28dd6268102d91d36ff6a43fa99988c88"
+  },
+  {
+    "path": "package.json",
+    "before": {
+      "3.9.0": "b16de95c667cc512c1010717b2157120d55606f4f2e4a7cf9f0bc1f68a27c522",
+      "3.10.0": "ecd25646cfabebe8e50abb98f8aad168ae53377213f1b05caa8e5f620172de6c"
+    },
+    "after": "ecd25646cfabebe8e50abb98f8aad168ae53377213f1b05caa8e5f620172de6c"
+  }
+]

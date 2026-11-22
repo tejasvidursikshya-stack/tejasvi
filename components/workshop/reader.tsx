@@ -1,0 +1,24 @@
+'use client';
+import {useEffect,useRef,useState} from 'react';
+import {ArrowLeft,ArrowRight,Download,RotateCw} from 'lucide-react';
+import {outputNames,type Output,type ResourceKit,type PublicKit} from '../../lib/atelier';
+import type {StudioPayload} from '../../lib/studio';
+import {Film} from './film';
+type Props={format:Output;title:string;kit?:Partial<ResourceKit>|PublicKit;modules?:StudioPayload['modules'];templateURL?:string};
+export function Reader({format,title,kit,modules=[],templateURL='/assets/workshop/slide-template.pptx'}:Props){
+ const [page,setPage]=useState(0),[flipped,flip]=useState(false),[answer,setAnswer]=useState<number|null>(null),[msg,message]=useState(''),[busy,setBusy]=useState(false),alive=useRef(true);
+ useEffect(()=>{alive.current=true;return()=>{alive.current=false;};},[]);useEffect(()=>{setPage(0);flip(false);setAnswer(null);message('');},[format,title]);
+ const key=format==='slides'?'slides':format==='worksheet'?'worksheet':format==='flashcards'?'flashcards':'scenes',items=kit?.[key]||[],qs=modules.flatMap(m=>m.quiz),n=format==='quiz'?qs.length:items.length,i=Math.max(0,Math.min(page,n-1));function next(v:number){setPage(v);flip(false);setAnswer(null);}
+ const pager=n>1?<div className="wk-pager"><button type="button" aria-label="Previous item" disabled={i===0} onClick={()=>next(i-1)}><ArrowLeft size={15}/></button><span>{i+1} of {n}</span><button type="button" aria-label="Next item" disabled={i===n-1} onClick={()=>next(i+1)}><ArrowRight size={15}/></button></div>:null;
+ async function exportFile(){setBusy(true);message('');try{const {download,safeName,deckBytes,printable}=await import('../../lib/atelier-export');const filename=safeName(title);if(format==='slides'){const r=await fetch(templateURL);if(!r.ok)throw Error('The slide layout could not be loaded.');const bytes=deckBytes(new Uint8Array(await r.arrayBuffer()),title,items);download(new Blob([new Uint8Array(bytes).buffer],{type:'application/vnd.openxmlformats-officedocument.presentationml.presentation'}),filename+'.pptx');}else{download(new Blob([printable(title,outputNames[format],items)],{type:'text/html;charset=utf-8'}),filename+'-'+format+'.html');}if(alive.current)message('Download prepared.');}catch(e){if(alive.current)message((e as Error).message||'Could not export this resource.');}finally{if(alive.current)setBusy(false);}}
+ const empty=<p className="wk-empty">This draft has no {outputNames[format].toLowerCase()} yet. Add material in the editor or generate a kit with the configured provider.</p>;
+ return <div className="wk-reader">
+ {format==='modules'||format==='plan'?<div className="wk-modules">{modules.length?modules.map((m,j)=><details key={j} open={j===0}><summary><b>{String(j+1).padStart(2,'0')}</b><span>{m.title}</span><small>{m.duration} min</small></summary><div><p><strong>Objective</strong> {m.objectives||'Add a learning objective.'}</p><p>{format==='plan'?m.facilitation||'Add activity timings and teaching notes.':m.content||'Add the learner content.'}</p>{format==='plan'&&m.assignment&&<p><strong>Practice</strong> {m.assignment.instructions}</p>}</div></details>):empty}</div>:
+ format==='summary'?<div className="wk-summary"><h4>Session recap</h4><p>{kit&&'summary'in kit&&kit.summary||'No summary written yet.'}</p><details><summary>Source notes</summary><p>{kit&&'notes'in kit&&kit.notes||'No notes recorded.'}</p></details></div>:
+ format==='video'?<Film key={title+JSON.stringify(items)} title={title} scenes={items}/>:
+ format==='quiz'?(n?<><div className="wk-q"><small>PRACTICE QUESTION {i+1}</small><h4>{qs[i].prompt}</h4>{qs[i].options.map((a,j)=><button type="button" aria-pressed={answer===j} key={j} onClick={()=>setAnswer(j)}><b>{String.fromCharCode(65+j)}</b>{a}</button>)}{answer!==null&&<p role="status">{answer===qs[i].correct?'Correct.':'Not quite. Try another option.'}</p>}</div>{pager}</>:empty):
+ n?<>{format==='worksheet'?<ol className="wk-sheet">{items.map((v,j)=><li key={j}><small>ACTIVITY {j+1}</small><h4>{v.title}</h4><p>{v.body}</p></li>)}</ol>:format==='flashcards'?<><button type="button" className="wk-flash" aria-label={flipped?'Show question':'Reveal answer'} onClick={()=>flip(!flipped)}><small>{flipped?'ANSWER':'RECALL CARD'} / {i+1}</small><strong>{flipped?items[i].body:items[i].title}</strong><span><RotateCw size={13}/> {flipped?'Show question':'Reveal answer'}</span></button>{pager}</>:<><div className={'wk-page wk-page-'+format} key={i}><small>{format==='slides'?'SLIDE':'STORY PAGE'} / {String(i+1).padStart(2,'0')}</small><h4>{items[i].title}</h4><p>{items[i].body}</p></div>{pager}</>}
+ {['slides','worksheet','storybook','flashcards'].includes(format)&&<button type="button" className="wk-file" disabled={busy} onClick={exportFile}><Download size={14}/>{format==='slides'?'Download PowerPoint':'Download printable '+outputNames[format].toLowerCase()}</button>}</>:empty}
+ {msg&&<p className="wk-response" role="status">{msg}</p>}</div>;
+}
+

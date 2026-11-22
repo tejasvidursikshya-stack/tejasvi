@@ -1,0 +1,21 @@
+import type { Metadata, Viewport } from "next";
+import { siteOrigin } from "@/lib/seo";
+import "./globals.css";
+import "./platform.css";
+import "./organization-bright.css";
+import "./dashboard.css";
+import "./corporate.css";
+import "./learning-tools.css";
+import "./assistant.css";
+import "./academic-learning.css";
+import "./student-experience.css";
+import "./mobile-experience.css";
+import "./learning-experience.css";
+import "./content-studio.css";
+import "./visual-editor.css";
+import "./enrolment-studio.css";
+import "./document-preview.css";
+import "./assessment-centre.css";
+export const viewport: Viewport = {width:"device-width",initialScale:1,viewportFit:"cover",themeColor:"#063868"};
+export const metadata: Metadata = {metadataBase:new URL(siteOrigin),verification:{google:process.env.GOOGLE_SITE_VERIFICATION||undefined},robots:{index:false,follow:false},manifest:"/api/mobile-manifest",title:"Tejasvi — Great learning. Made simple.",description:"One simple learning platform for schools, colleges and growing teams. Explore courses, live learning, assessments and progress with Tejasvi.",icons:{icon:"/favicon.svg",shortcut:"/favicon.svg"}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
