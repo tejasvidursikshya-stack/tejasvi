@@ -4,6 +4,8 @@ const nextConfig = {
  poweredByHeader: false,
  skipTrailingSlashRedirect:true,
  serverExternalPackages: ['pg'],
+ // The EMIS shell is read at runtime by app/erp/[org]/[[...path]]/route.ts.
+ outputFileTracingIncludes: {'/erp/**': ['./build/emis/index.html']},
  async headers() {
   return [
    {source:'/:path*',headers:securityHeaders(process.env.APP_URL || 'http://localhost:3000',process.env.NODE_ENV === 'development')},

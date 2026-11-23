@@ -9,3 +9,5 @@ backups/
 
 build/
 .settings-*.tmp
+/public/campus-ui/
+auth.txt
